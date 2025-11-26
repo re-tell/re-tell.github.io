@@ -1,0 +1,61 @@
+/*
+ * このファイルは、元のindex.html内の <style> タグにあった
+ * カスタムCSS（独自に定義したスタイル）のみを抽出したものです。
+ *
+ * 【重要】このCSSは、HTML側にTailwind CSSのCDNが読み込まれていることを前提としています。
+ * これ単独では、レイアウトは定義されていませんのでご注意ください。
+ */
+
+/* Google Fonts: Inter (英数字) + Noto Sans JP (日本語) を読み込み */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700;900&display=swap');
+
+:root {
+    /* カスタムカラー変数の定義 */
+    --color-primary: #1a73e8; /* Google Blue */
+    --color-dark: #202124;    /* Google Dark Gray */
+    --color-text: #3c4043;    /* Google Text Gray */
+    --color-bg-light: #f8f9fa; /* Google Light Gray BG */
+}
+
+/* 全体の基本設定 */
+body {
+    font-family: 'Inter', 'Noto Sans JP', sans-serif;
+    color: var(--color-text);
+    background-color: #ffffff;
+    line-height: 1.8; /* ゆったりとした行間 */
+    letter-spacing: 0.02em;
+}
+
+/* 見出しのフォントカラー設定 */
+h1, h2, h3, h4 {
+    color: var(--color-dark);
+    letter-spacing: 0.04em;
+}
+
+/* カスタムクラスの定義 */
+.text-primary { color: var(--color-primary); }
+.bg-primary { background-color: var(--color-primary); }
+.bg-surface { background-color: var(--color-bg-light); }
+
+/* 画像のホバーエフェクト */
+.img-hover-zoom {
+    overflow: hidden;
+}
+.img-hover-zoom img {
+    /* アニメーションの速度と動き方を定義 */
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.img-hover-zoom:hover img {
+    /* ホバー時に画像を1.05倍に拡大 */
+    transform: scale(1.05);
+}
+
+/* ボタンのモダンなホバーエフェクト */
+.btn-modern {
+    transition: all 0.3s ease;
+}
+.btn-modern:hover {
+    /* ホバー時に少し上に移動し、影を強くする */
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(26, 115, 232, 0.2);
+}
