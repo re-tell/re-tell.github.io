@@ -1,61 +1,63 @@
-/*
- * このファイルは、元のindex.html内の <style> タグにあった
- * カスタムCSS（独自に定義したスタイル）のみを抽出したものです。
- *
- * 【重要】このCSSは、HTML側にTailwind CSSのCDNが読み込まれていることを前提としています。
- * これ単独では、レイアウトは定義されていませんのでご注意ください。
- */
+/* -------------------------------------- */
+/* カスタムCSSの定義 */
+/* -------------------------------------- */
 
-/* Google Fonts: Inter (英数字) + Noto Sans JP (日本語) を読み込み */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700;900&display=swap');
+/* Instagram風のグラデーションを定義 */
+/* (このCSSファイルでは、Tailwindのテーマ関数theme()は直接使えません。ただし、tailwind.configで定義したカラー名はTailwindクラスとして機能するため、ここではアニメーションと標準スタイルを定義します。) */
 
-:root {
-    /* カスタムカラー変数の定義 */
-    --color-primary: #1a73e8; /* Google Blue */
-    --color-dark: #202124;    /* Google Dark Gray */
-    --color-text: #3c4043;    /* Google Text Gray */
-    --color-bg-light: #f8f9fa; /* Google Light Gray BG */
+.instagram-gradient {
+    /* Tailwindの設定で定義したカスタムカラークラスをCSS変数として利用できないため、
+       ここではTailwindクラスとしてHTML側で利用し、アニメーション部分のみをCSSで定義します。
+       このファイルで背景色を定義する必要がある場合、以下のように固定値で書く必要があります。 */
+    background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+    background-size: 400% 400%;
+    animation: gradient-shift 10s ease infinite;
 }
 
-/* 全体の基本設定 */
-body {
-    font-family: 'Inter', 'Noto Sans JP', sans-serif;
-    color: var(--color-text);
-    background-color: #ffffff;
-    line-height: 1.8; /* ゆったりとした行間 */
-    letter-spacing: 0.02em;
+/* グラデーションのアニメーション */
+@keyframes gradient-shift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
-/* 見出しのフォントカラー設定 */
-h1, h2, h3, h4 {
-    color: var(--color-dark);
-    letter-spacing: 0.04em;
+/* CTAボタンの影にグラデーションの色を反映 */
+.cta-instagram-shadow {
+    /* TailwindのテーマカラーをCSS側で直接参照できないため、固定色で近い色を指定 */
+    box-shadow: 0 10px 20px -5px rgba(214, 41, 118, 0.5), /* instagramMid2 (Magenta) の透明度あり */
+                0 5px 10px -2px rgba(250, 126, 30, 0.5);  /* instagramMid (Orange) の透明度あり */
 }
 
-/* カスタムクラスの定義 */
-.text-primary { color: var(--color-primary); }
-.bg-primary { background-color: var(--color-primary); }
-.bg-surface { background-color: var(--color-bg-light); }
-
-/* 画像のホバーエフェクト */
-.img-hover-zoom {
-    overflow: hidden;
+/* スクロールアニメーションのベーススタイル */
+.animated-element {
+    opacity: 0;
+    transform: translateY(20px);
+    /* JSで遅延を適用するため、transition-delayはインラインスタイルで設定されます */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
+.animated-element.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* タイムラインのドットを中央に配置するための調整 */
+.timeline-dot {
+    position: relative;
+}
+@media (min-width: 768px) {
+    .timeline-dot {
+        /* Dotを中央の線上に配置 */
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+    }
+}
+
+/* 画像ホバー時のズーム */
 .img-hover-zoom img {
-    /* アニメーションの速度と動き方を定義 */
-    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: transform 0.8s ease;
 }
 .img-hover-zoom:hover img {
-    /* ホバー時に画像を1.05倍に拡大 */
     transform: scale(1.05);
-}
-
-/* ボタンのモダンなホバーエフェクト */
-.btn-modern {
-    transition: all 0.3s ease;
-}
-.btn-modern:hover {
-    /* ホバー時に少し上に移動し、影を強くする */
-    transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(26, 115, 232, 0.2);
 }
