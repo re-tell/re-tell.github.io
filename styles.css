@@ -3,12 +3,7 @@
 /* -------------------------------------- */
 
 /* Instagram風のグラデーションを定義 */
-/* (このCSSファイルでは、Tailwindのテーマ関数theme()は直接使えません。ただし、tailwind.configで定義したカラー名はTailwindクラスとして機能するため、ここではアニメーションと標準スタイルを定義します。) */
-
 .instagram-gradient {
-    /* Tailwindの設定で定義したカスタムカラークラスをCSS変数として利用できないため、
-       ここではTailwindクラスとしてHTML側で利用し、アニメーション部分のみをCSSで定義します。
-       このファイルで背景色を定義する必要がある場合、以下のように固定値で書く必要があります。 */
     background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
     background-size: 400% 400%;
     animation: gradient-shift 10s ease infinite;
@@ -23,16 +18,14 @@
 
 /* CTAボタンの影にグラデーションの色を反映 */
 .cta-instagram-shadow {
-    /* TailwindのテーマカラーをCSS側で直接参照できないため、固定色で近い色を指定 */
-    box-shadow: 0 10px 20px -5px rgba(214, 41, 118, 0.5), /* instagramMid2 (Magenta) の透明度あり */
-                0 5px 10px -2px rgba(250, 126, 30, 0.5);  /* instagramMid (Orange) の透明度あり */
+    box-shadow: 0 10px 20px -5px rgba(214, 41, 118, 0.5), /* instagramMid2 */
+                0 5px 10px -2px rgba(250, 126, 30, 0.5);  /* instagramMid */
 }
 
 /* スクロールアニメーションのベーススタイル */
 .animated-element {
     opacity: 0;
     transform: translateY(20px);
-    /* JSで遅延を適用するため、transition-delayはインラインスタイルで設定されます */
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 .animated-element.is-visible {
@@ -46,7 +39,6 @@
 }
 @media (min-width: 768px) {
     .timeline-dot {
-        /* Dotを中央の線上に配置 */
         position: absolute;
         left: 50%;
         top: 0;
