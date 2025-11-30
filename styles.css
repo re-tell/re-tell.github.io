@@ -1,11 +1,17 @@
-/* --- Base Variables & Reset --- */
+/* --- Base Variables & Reset (Light Mode - Cool & Modern) --- */
 :root {
-    --bg-color: #0a0a0a;
-    --text-color: #e0e0e0;
-    --accent-color: #00f0ff;
-    --accent-hover: #00bcd4;
-    --glass-bg: rgba(255, 255, 255, 0.05);
-    --glass-border: rgba(255, 255, 255, 0.1);
+    --bg-color: #ffffff;
+    --bg-secondary: #f4f4f5; /* 非常に薄いグレー */
+    --text-color: #1a1a1a;   /* 真っ黒ではなく濃いグレー */
+    --text-light: #666666;
+    --accent-color: #2563eb; /* Tech Blue - 知的で鮮やかな青 */
+    --accent-hover: #1d4ed8;
+    
+    /* ガラス表現の調整（白背景用） */
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(0, 0, 0, 0.08);
+    --glass-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    
     --font-jp: 'Noto Sans JP', sans-serif;
     --font-en: 'Oswald', sans-serif;
 }
@@ -46,22 +52,36 @@ img { max-width: 100%; display: block; }
     letter-spacing: 2px;
     margin-bottom: 3rem;
     text-align: center;
-    background: linear-gradient(90deg, #fff, var(--accent-color));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--text-color);
+    /* 白背景でのグラデーション文字は可読性が落ちるため、単色または濃いグラデーションに変更 */
+    background: none;
+    -webkit-text-fill-color: initial;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--accent-color);
+    margin: 10px auto 0;
 }
 
 .center-text {
     text-align: center;
     margin-bottom: 40px;
+    color: var(--text-light);
 }
 
-/* Button Styles */
+/* Button Styles (Light Mode) */
 .btn {
     display: inline-block;
     padding: 15px 40px;
     background: transparent;
-    border: 1px solid var(--accent-color);
+    border: 2px solid var(--accent-color);
     color: var(--accent-color);
     font-weight: bold;
     letter-spacing: 1px;
@@ -69,6 +89,7 @@ img { max-width: 100%; display: block; }
     overflow: hidden;
     z-index: 1;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 .btn::before {
@@ -78,25 +99,27 @@ img { max-width: 100%; display: block; }
     width: 0%; height: 100%;
     background: var(--accent-color);
     z-index: -1;
-    transition: 0.4s ease;
+    transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .btn:hover::before { width: 100%; }
-.btn:hover { color: #000; }
+.btn:hover { color: #fff; }
 
+/* ヘッダーボタン */
 .btn-nav {
     display: inline-block;
     padding: 10px 20px;
-    background: transparent;
-    border: 1px solid var(--accent-color);
-    color: var(--accent-color);
+    background: var(--accent-color);
+    color: #fff;
     font-weight: bold;
     font-size: 0.8rem;
     transition: 0.3s;
+    border-radius: 2px;
 }
 .btn-nav:hover {
-    background: var(--accent-color);
-    color: #000;
+    background: var(--accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
 }
 
 /* --- Header --- */
@@ -105,9 +128,10 @@ header {
     top: 0; width: 100%;
     padding: 20px 0;
     z-index: 1000;
-    background: rgba(10, 10, 10, 0.8);
+    background: rgba(255, 255, 255, 0.9);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--glass-border);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.03);
 }
 
 nav {
@@ -120,22 +144,29 @@ nav {
     font-family: var(--font-en);
     font-size: 1.5rem;
     font-weight: bold;
-    color: #fff;
+    color: #000;
+    letter-spacing: -1px;
 }
 
 .nav-links { display: flex; gap: 30px; }
-.nav-links a { font-size: 0.9rem; opacity: 0.7; }
-.nav-links a:hover { opacity: 1; color: var(--accent-color); }
+.nav-links a { 
+    font-size: 0.9rem; 
+    color: var(--text-color);
+    font-weight: 500;
+}
+.nav-links a:hover { color: var(--accent-color); }
 
-/* --- Hero Section --- */
+/* --- Hero Section (Light Mode) --- */
 .hero {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: radial-gradient(circle at center, #1a1a1a 0%, #000 100%);
+    /* 明るいグラデーション */
+    background: radial-gradient(circle at center, #ffffff 0%, #e2e8f0 100%);
     position: relative;
+    overflow: hidden;
 }
 
 .hero-content {
@@ -148,12 +179,14 @@ nav {
     line-height: 1.1;
     margin-bottom: 20px;
     text-transform: uppercase;
+    color: #000;
+    letter-spacing: -2px;
 }
 
 .hero p {
     font-size: 1.2rem;
     margin-bottom: 40px;
-    opacity: 0.8;
+    color: var(--text-light);
 }
 
 .hero-bg-text {
@@ -163,7 +196,7 @@ nav {
     font-family: var(--font-en);
     font-size: 15vw;
     font-weight: bold;
-    color: rgba(255, 255, 255, 0.02);
+    color: rgba(0, 0, 0, 0.03); /* 薄い黒で背景文字 */
     white-space: nowrap;
     z-index: 1;
     pointer-events: none;
@@ -176,7 +209,7 @@ section { padding: 100px 0; }
 .overview-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 50px;
+    gap: 60px;
     align-items: center;
 }
 
@@ -185,47 +218,90 @@ section { padding: 100px 0; }
     margin-bottom: 20px;
     border-left: 4px solid var(--accent-color);
     padding-left: 15px;
+    line-height: 1.4;
+}
+
+.overview-text p {
+    color: var(--text-light);
 }
 
 .glass-card {
-    background: var(--glass-bg);
+    background: rgba(255, 255, 255, 0.8);
     border: 1px solid var(--glass-border);
-    padding: 30px;
-    border-radius: 4px;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: var(--glass-shadow);
+    position: relative;
+}
+/* 装飾的な要素を追加 */
+.glass-card::before {
+    content: '';
+    position: absolute;
+    top: -10px; right: -10px;
+    width: 100%; height: 100%;
+    border: 1px solid var(--accent-color);
+    border-radius: 8px;
+    z-index: -1;
+    opacity: 0.3;
 }
 
-.glass-card .label { font-size: 0.9rem; color: #aaa; }
-.glass-card .info-large { font-size: 1.5rem; font-weight: bold; margin-bottom: 20px; }
-.glass-card .tax { font-size:0.9rem; color:#fff; font-weight: normal; }
+.glass-card .label { 
+    font-size: 0.8rem; 
+    color: var(--text-light); 
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.glass-card .info-large { 
+    font-size: 1.8rem; 
+    font-family: var(--font-en);
+    font-weight: bold; 
+    margin-bottom: 20px; 
+    color: #000;
+}
+.glass-card .tax { font-size:0.9rem; color:#999; font-weight: normal; }
 
 /* --- Target Audience --- */
+#target {
+    background-color: var(--bg-secondary);
+}
+
 .target-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    gap: 30px;
 }
 
 .target-item {
-    background: linear-gradient(145deg, #111, #161616);
-    padding: 30px;
-    border-top: 2px solid transparent;
+    background: #fff;
+    padding: 40px 30px;
+    border: 1px solid rgba(0,0,0,0.05);
     transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.02);
 }
 
 .target-item:hover {
-    border-top: 2px solid var(--accent-color);
+    border-top: 4px solid var(--accent-color);
     transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
 .target-item h4 {
     color: var(--accent-color);
-    margin-bottom: 10px;
-    font-size: 1.2rem;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    font-family: var(--font-en);
+}
+
+.target-item p {
+    color: var(--text-light);
+    font-size: 0.95rem;
 }
 
 /* --- Skills Gained --- */
 .skills {
-    background: #0f0f0f;
+    background: #fff;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
 }
 
 .skills-grid {
@@ -236,22 +312,34 @@ section { padding: 100px 0; }
 }
 
 .skill-box {
-    border: 1px solid var(--glass-border);
-    padding: 20px 40px;
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 15px 30px;
     border-radius: 50px;
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 1rem;
+    color: var(--text-color);
     display: flex;
     align-items: center;
     gap: 10px;
+    transition: 0.2s;
+}
+.skill-box:hover {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
 }
 
 .skill-box::before {
     content: '✓';
     color: var(--accent-color);
+    font-weight: bold;
 }
 
 /* --- Schedule (Timeline) --- */
+#schedule {
+    background-color: var(--bg-secondary);
+}
+
 .timeline {
     position: relative;
     max-width: 800px;
@@ -262,7 +350,7 @@ section { padding: 100px 0; }
     content: '';
     position: absolute;
     width: 2px;
-    background: var(--glass-border);
+    background: #ddd;
     top: 0; bottom: 0; left: 50%;
     transform: translateX(-50%);
 }
@@ -280,8 +368,9 @@ section { padding: 100px 0; }
 .timeline-item::after {
     content: '';
     position: absolute;
-    width: 16px; height: 16px;
-    background: var(--accent-color);
+    width: 14px; height: 14px;
+    background: #fff;
+    border: 3px solid var(--accent-color);
     border-radius: 50%;
     top: 25px;
     z-index: 10;
@@ -293,56 +382,85 @@ section { padding: 100px 0; }
 .time {
     font-family: var(--font-en);
     color: var(--accent-color);
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: bold;
+    letter-spacing: 1px;
 }
 
 .timeline-content {
-    background: var(--glass-bg);
-    padding: 20px;
+    background: #fff;
+    padding: 25px;
     margin-top: 10px;
-    border-radius: 4px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    text-align: left;
 }
+
+.timeline-content h4 { font-size: 1.1rem; margin-bottom: 5px; }
+.timeline-content p { font-size: 0.9rem; color: var(--text-light); }
 
 /* --- Instructor --- */
 .instructor-container {
     display: flex;
-    gap: 40px;
+    gap: 50px;
     align-items: center;
-    background: var(--glass-bg);
-    padding: 50px;
-    border: 1px solid var(--glass-border);
+    background: #fff;
+    padding: 60px;
+    border: 1px solid #eee;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.03);
 }
 
 .instructor-img {
-    width: 200px;
-    height: 200px;
-    background-color: #333;
+    width: 220px;
+    height: 220px;
+    background-color: #eee;
     border-radius: 50%;
     flex-shrink: 0;
     overflow: hidden;
     position: relative;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
 .instructor-img img {
     width: 100%; height: 100%; object-fit: cover;
+    filter: grayscale(100%); /* モノクロにしてクールさを出す */
+    transition: 0.5s;
+}
+.instructor-container:hover .instructor-img img {
+    filter: grayscale(0%); /* ホバーでカラーに */
 }
 
 .instructor-info h4 {
-    font-size: 1.5rem;
+    font-family: var(--font-en);
+    font-size: 2rem;
     margin-bottom: 5px;
+    letter-spacing: 1px;
 }
 .instructor-role {
     color: var(--accent-color);
+    font-weight: bold;
     font-size: 0.9rem;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     display: block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.instructor-info p {
+    color: var(--text-light);
 }
 
-/* --- Contact / CTA --- */
+/* --- Contact / CTA (Dark Background for contrast) --- */
 .contact {
     text-align: center;
-    background: linear-gradient(180deg, #0a0a0a 0%, #151515 100%);
+    /* 最後だけダークにして締めくくる */
+    background: #111;
+    color: #fff;
+}
+
+.contact .section-title {
+    color: #fff;
+    background: none;
+    -webkit-text-fill-color: initial;
 }
 
 .contact-form {
@@ -357,21 +475,23 @@ section { padding: 100px 0; }
     display: block;
     margin-bottom: 8px;
     font-size: 0.9rem;
-    color: #aaa;
+    color: #888;
 }
 
 .form-control {
     width: 100%;
     padding: 15px;
-    background: #1a1a1a;
+    background: #222;
     border: 1px solid #333;
     color: #fff;
     outline: none;
     transition: 0.3s;
+    border-radius: 4px;
 }
 
 .form-control:focus {
     border-color: var(--accent-color);
+    background: #2a2a2a;
 }
 
 .center-btn {
@@ -382,10 +502,22 @@ section { padding: 100px 0; }
     width: 100%;
 }
 
+.contact-btn {
+    background: var(--accent-color);
+    color: #fff;
+    border: none;
+}
+.contact-btn:hover {
+    background: var(--accent-hover);
+    color: #fff;
+}
+.contact-btn:hover::before { display: none; } /* デフォルトのホバーエフェクトを無効化 */
+
 /* --- Footer --- */
 footer {
     padding: 40px 0;
     text-align: center;
+    background: #111;
     border-top: 1px solid #222;
     font-size: 0.8rem;
     color: #666;
@@ -395,7 +527,7 @@ footer {
 .fade-in {
     opacity: 0;
     transform: translateY(30px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
 .fade-in.visible {
@@ -408,12 +540,13 @@ footer {
     .hero h1 { font-size: 3rem; }
     .overview-grid, .instructor-container { grid-template-columns: 1fr; flex-direction: column; text-align: center; }
     
-    /* Timeline Mobile Fix */
     .timeline::after { left: 20px; }
     .timeline-item { width: 100%; padding-left: 50px; padding-right: 10px; text-align: left; }
     .timeline-item:nth-child(odd) { left: 0; text-align: left; }
     .timeline-item:nth-child(even) { left: 0; }
-    .timeline-item:nth-child(odd)::after, .timeline-item:nth-child(even)::after { left: 12px; }
-    
-    .nav-links { display: none; } /* Mobile Menu is hidden for simplicity */
+    .timeline-item:nth-child(odd)::after, .timeline-item:nth-child(even)::after { left: 13px; }
+    .timeline-content { text-align: left; }
+
+    .nav-links { display: none; } 
+    .instructor-img { margin-bottom: 20px; }
 }
