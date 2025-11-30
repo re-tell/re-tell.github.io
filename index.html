@@ -30,34 +30,27 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Section (Background Image Style with Parallax) -->
     <section class="hero">
-        <div class="hero-bg-text">CINEMA</div>
-        <div class="container hero-content fade-in">
-            <div class="hero-text-area">
-                <div class="hero-tag">1日完結！</div>
-                <h1>プロと挑む、<br>映像制作の<span class="text-accent">現場体験</span></h1>
-                <p>「動画なんて作ったことがない…」そんなあなたこそ、大歓迎。<br>
-                企画から編集までを走り抜ける濃密な体験。<br>
-                自分の手で作品を生み出し、昨日より一歩成長した自分に出会いませんか？</p>
-                <div class="hero-btns">
-                    <a href="https://docs.google.com/forms/d/1nyiM4Ghv3oH6epXvyiGqKweY7v1uyEnul16L69Rp2aY/viewform" target="_blank" class="btn">今すぐエントリー</a>
-                    <a href="#overview" class="btn btn-secondary">プロジェクト概要</a>
-                </div>
-            </div>
-            <div class="hero-image-area">
-                <!-- 修正: シネマティックなカメラ機材の画像 -->
-                <img src="https://images.unsplash.com/photo-1596707328677-49f993f41c49?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="映像制作現場">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content fade-in-up">
+            <div class="hero-tag">1日完結！</div>
+            <h1>プロと挑む、<br>映像制作の<span class="text-accent">現場体験</span></h1>
+            <p>「動画なんて作ったことがない…」そんなあなたこそ、大歓迎。<br>
+            企画から編集までを走り抜ける濃密な体験。<br>
+            自分の手で作品を生み出し、昨日より一歩成長した自分に出会いませんか？</p>
+            <div class="hero-btns">
+                <a href="https://docs.google.com/forms/d/1nyiM4Ghv3oH6epXvyiGqKweY7v1uyEnul16L69Rp2aY/viewform" target="_blank" class="btn btn-hero">今すぐエントリー</a>
+                <a href="#overview" class="btn btn-hero-outline">プロジェクト概要</a>
             </div>
         </div>
     </section>
 
-    <!-- プロジェクト概要 (Overview - Redesigned) -->
+    <!-- プロジェクト概要 (Overview) -->
     <section id="overview" class="container">
-        <h2 class="section-title fade-in">概要</h2>
+        <h2 class="section-title fade-in-up">概要</h2>
         
-        <!-- コンセプトメッセージ（密度を高める要素） -->
-        <div class="overview-concept fade-in">
+        <div class="overview-concept fade-in-up">
             <p class="concept-lead">教室では学べない、<br>リアルな社会課題に<span class="text-accent">クリエイティブ</span>で挑む。</p>
             <p class="concept-desc">
                 教科書通りの正解はありません。目の前にあるのは、クライアントの「本気の想い」だけ。<br>
@@ -66,8 +59,7 @@
             </p>
         </div>
         
-        <!-- 特徴グリッド（デザイン刷新） -->
-        <div class="overview-features fade-in">
+        <div class="overview-features fade-in-up delay-1">
             <div class="feature-card">
                 <div class="feature-number">01</div>
                 <div class="feature-text">
@@ -95,12 +87,12 @@
     <!-- 1日の流れ (Schedule) -->
     <section id="schedule" class="bg-secondary">
         <div class="container">
-            <h2 class="section-title fade-in">1日の流れ</h2>
-            <p class="center-text fade-in">朝から夜まで、集中して最高のPR動画を生み出すフロー</p>
+            <h2 class="section-title fade-in-up">1日の流れ</h2>
+            <p class="center-text fade-in-up">朝から夜まで、集中して最高のPR動画を生み出すフロー</p>
             
-            <div class="timeline fade-in">
+            <div class="timeline">
                 <!-- Step 1 -->
-                <div class="timeline-item">
+                <div class="timeline-item fade-in-right">
                     <div class="time">9:00 - 10:00</div>
                     <div class="timeline-content">
                         <h4>オリエンテーション＆企画会議</h4>
@@ -111,19 +103,19 @@
                     </div>
                 </div>
                 <!-- Step 2 -->
-                <div class="timeline-item">
+                <div class="timeline-item fade-in-left">
                     <div class="time">10:00 - 12:30</div>
                     <div class="timeline-content">
                         <h4>アウトプット (前半)</h4>
                         <p>企画に基づいた構成案の作成、素材の選定/撮影、簡易的な編集（後編）。</p>
                         <div class="timeline-img">
-                            <!-- 修正: ジンバル撮影・アクティブな現場写真 -->
-                            <img src="https://images.unsplash.com/photo-1563205764-6e9274291079?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="撮影風景">
+                            <!-- 画像変更: ジンバル撮影のより確実なURL -->
+                            <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="撮影風景">
                         </div>
                     </div>
                 </div>
                 <!-- Step 3 (Lunch) -->
-                <div class="timeline-item">
+                <div class="timeline-item fade-in-up">
                     <div class="time">12:30 - 14:00</div>
                     <div class="timeline-content center-content">
                         <div class="lunch-icon">☕</div>
@@ -132,25 +124,24 @@
                     </div>
                 </div>
                 <!-- Step 4 -->
-                <div class="timeline-item">
+                <div class="timeline-item fade-in-right">
                     <div class="time">14:00 - 16:30</div>
                     <div class="timeline-content">
                         <h4>アウトプット (後半)</h4>
                         <p>フィードバックを元に本編集。テロップ、音楽、エフェクトなどを加え、完成度を高める。</p>
                         <div class="timeline-img">
-                            <!-- 修正: PC編集画面・Premiere Proなどのイメージ -->
                             <img src="https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="動画編集">
                         </div>
                     </div>
                 </div>
                 <!-- Step 5 -->
-                <div class="timeline-item">
+                <div class="timeline-item fade-in-left">
                     <div class="time">16:30 - 18:00</div>
                     <div class="timeline-content">
                         <h4>最終発表＆ネクストアクション</h4>
                         <p>完成動画の発表、協力組織への納品。ネクストアクション設定。</p>
                         <div class="timeline-img">
-                            <img src="https://images.unsplash.com/photo-1551818255-e6e10975bc17?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="発表会">
+                            <img src="https://images.unsplash.com/photo-1544531586-fde5298cdd40?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="発表会">
                         </div>
                     </div>
                 </div>
@@ -158,13 +149,12 @@
         </div>
     </section>
 
-    <!-- 得られる力 (Benefits - Redesigned) -->
+    <!-- 得られる力 (Benefits) -->
     <section id="benefits" class="container">
-        <h2 class="section-title fade-in">得られる力</h2>
-        <p class="center-text fade-in">将来に活きる本質的なスキル</p>
+        <h2 class="section-title fade-in-up">得られる力</h2>
+        <p class="center-text fade-in-up">将来に活きる本質的なスキル</p>
 
-        <div class="benefits-grid fade-in">
-            <!-- Skill 01 -->
+        <div class="benefits-grid fade-in-up delay-1">
             <div class="benefit-panel">
                 <div class="benefit-icon-area">
                     <span class="b-icon">🧠</span>
@@ -180,7 +170,6 @@
                 </div>
             </div>
 
-            <!-- Skill 02 -->
             <div class="benefit-panel">
                 <div class="benefit-icon-area">
                     <span class="b-icon">🎥</span>
@@ -200,11 +189,10 @@
 
     <!-- 講師紹介 (Instructor) -->
     <section id="instructor" class="bg-secondary">
-        <div class="container fade-in">
+        <div class="container fade-in-up">
             <h2 class="section-title">講師紹介</h2>
             <div class="instructor-container">
                 <div class="instructor-visual">
-                    <!-- 画像修正: モノクロ/カラー切り替え用 -->
                     <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="佐藤克哉">
                 </div>
                 <div class="instructor-content">
@@ -225,16 +213,16 @@
         </div>
     </section>
 
-    <!-- ターゲット / CTA -->
-    <section id="target" class="target-section">
-        <div class="container fade-in">
+    <!-- ターゲット / CTA (Light Theme) -->
+    <section id="target" class="target-section-light">
+        <div class="container fade-in-up">
             <div class="target-wrapper">
                 <h2>1day 映像制作プロジェクトに参加する</h2>
                 <p class="target-sub">その一歩が、未来のクリエイティブを変える。</p>
                 
-                <div class="target-card">
+                <div class="target-card-light">
                     <p class="list-title">こんな方に参加して欲しい</p>
-                    <ul class="refined-list">
+                    <ul class="refined-list-dark">
                         <li>大学生・大学院生（学年不問）</li>
                         <li>未経験者 大歓迎（機材知識不要）</li>
                         <li>機材持参 不要（スマホ1台でもOK）</li>
@@ -244,16 +232,16 @@
                     </ul>
                 </div>
 
-                <a href="https://docs.google.com/forms/d/1nyiM4Ghv3oH6epXvyiGqKweY7v1uyEnul16L69Rp2aY/viewform" target="_blank" class="btn btn-primary-glow">今すぐエントリーする</a>
+                <a href="https://docs.google.com/forms/d/1nyiM4Ghv3oH6epXvyiGqKweY7v1uyEnul16L69Rp2aY/viewform" target="_blank" class="btn btn-cta-main">今すぐエントリーする</a>
             </div>
         </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact" class="contact">
-        <div class="container fade-in">
-            <h2 class="section-title" style="color:#fff;">お問い合わせ</h2>
-            <p style="margin-bottom: 40px; color: #ccc;">
+    <!-- Contact (Light Theme) -->
+    <section id="contact" class="contact-light">
+        <div class="container fade-in-up">
+            <h2 class="section-title">お問い合わせ</h2>
+            <p style="margin-bottom: 40px; color: #64748b;">
                 イベントに関するご質問や、詳細情報の確認は公式Instagramまで。<br>
                 DMにてお気軽にご連絡ください。
             </p>
@@ -270,12 +258,12 @@
         </div>
     </footer>
 
-    <!-- Animation Script -->
+    <!-- Dynamic Scroll Animation Script -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const observerOptions = {
                 root: null,
-                rootMargin: '0px',
+                rootMargin: '0px 0px -50px 0px', // 少し手前で発火させる
                 threshold: 0.1
             };
 
@@ -287,8 +275,13 @@
                 });
             }, observerOptions);
 
-            const fadeElements = document.querySelectorAll('.fade-in');
-            fadeElements.forEach(el => observer.observe(el));
+            const fadeUpElements = document.querySelectorAll('.fade-in-up');
+            const fadeRightElements = document.querySelectorAll('.fade-in-right');
+            const fadeLeftElements = document.querySelectorAll('.fade-in-left');
+            
+            fadeUpElements.forEach(el => observer.observe(el));
+            fadeRightElements.forEach(el => observer.observe(el));
+            fadeLeftElements.forEach(el => observer.observe(el));
         });
     </script>
 </body>
