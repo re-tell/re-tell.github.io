@@ -231,4 +231,57 @@
                     </ul>
                 </div>
 
-                <a href="https://docs.google.com/forms/d/1nyiM4Ghv3oH6epXvyiGqKweY7
+                <a href="https://docs.google.com/forms/d/1nyiM4Ghv3oH6epXvyiGqKweY7v1uyEnul16L69Rp2aY/viewform" target="_blank" class="btn btn-cta-main">今すぐエントリーする</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact (Light Theme) -->
+    <section id="contact" class="contact-light">
+        <div class="container fade-in-up">
+            <h2 class="section-title">お問い合わせ</h2>
+            <p style="margin-bottom: 40px; color: #64748b;">
+                イベントに関するご質問や、詳細情報の確認は公式Instagramまで。<br>
+                DMにてお気軽にご連絡ください。
+            </p>
+            <a href="https://instagram.com/dummy_project_account" target="_blank" class="btn btn-instagram">
+                公式Instagramへ
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 1day Project. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Dynamic Scroll Animation Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px 0px -50px 0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+
+            const fadeUpElements = document.querySelectorAll('.fade-in-up');
+            const fadeRightElements = document.querySelectorAll('.fade-in-right');
+            const fadeLeftElements = document.querySelectorAll('.fade-in-left');
+            
+            fadeUpElements.forEach(el => observer.observe(el));
+            fadeRightElements.forEach(el => observer.observe(el));
+            fadeLeftElements.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>
