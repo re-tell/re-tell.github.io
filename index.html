@@ -3,446 +3,209 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>1day 映像制作プロジェクト | 1日完結型 映像制作体験</title>
-    
-    <!-- 必須: Google Fonts (Inter) を読み込む -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
-    
-    <!-- 必須: Tailwind CSSを読み込む（インターネット経由） -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- 必須: カスタムスタイルを読み込む -->
-    <link rel="stylesheet" href="styles.css"> 
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#1a73e8', // Google Blue
-                        surface: '#f7f9fb', // Soft off-white
-                        accentGray: '#e5e7eb',
-                        // Instagramの公式カラー
-                        instagramFrom: '#feda75',
-                        instagramMid: '#fa7e1e',
-                        instagramMid2: '#d62976',
-                        instagramTo: '#962fbf',
-                        instagramDark: '#4f5bd5',
-                    },
-                }
-            }
-        }
-    </script>
-    
+    <title>1-DAY CINEMA BOOTCAMP | 映像制作プロジェクト</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&family=Oswald:wght@400;600&display=swap" rel="stylesheet">
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body class="antialiased">
+<body>
 
-    <!-- JavaScript for Scroll Animation -->
-    <script>
-        window.onload = function() {
-            const elements = document.querySelectorAll('.animated-element');
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('is-visible');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.1 });
-            elements.forEach(element => { observer.observe(element); });
-        };
-    </script>
-
-    <!-- ヘッダー -->
-    <header class="fixed top-0 w-full z-50 bg-white shadow-lg border-b border-gray-100 animated-element" style="animation-delay: 0s;">
-        <div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex justify-between items-center">
-            <div class="text-2xl font-black tracking-tighter text-gray-900 z-10">1day 映像制作プロジェクト</div>
-            
-            <div class="flex items-center gap-6 z-10"> 
-                <nav class="hidden md:flex gap-8">
-                    <a href="#overview" class="text-sm font-medium text-gray-600 hover:text-primary transition">概要</a>
-                    <a href="#schedule" class="text-sm font-medium text-gray-600 hover:text-primary transition">1日の流れ</a>
-                    <a href="#benefits" class="text-sm font-medium text-gray-600 hover:text-primary transition">得られる力</a>
-                    <a href="#instructor" class="text-sm font-medium text-gray-600 hover:text-primary transition">講師</a>
-                    <a href="#contact" class="text-sm font-medium text-gray-600 hover:text-primary transition">お問い合わせ</a>
-                </nav>
-                
-                <a href="https://docs.google.com/forms/d/1nyiM4Ghv3oH6epXvyiGqKweY7v1uyEnul16L69Rp2aY/viewform" target="_blank" class="btn-modern px-5 py-2.5 bg-primary text-white text-sm font-bold rounded-lg hover:bg-blue-700">
-                    申し込み
-                </a>
-            </div>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">ONE DAY FILM.</div>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#target">Target</a></li>
+                    <li><a href="#schedule">Schedule</a></li>
+                    <li><a href="#instructor">Instructor</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <a href="#contact" class="btn-nav">申し込む</a>
+            </nav>
         </div>
     </header>
 
-    <main class="pt-20">
-        
-        <!-- 1. ファーストビュー (Hero) -->
-        <section class="relative pt-32 pb-48 lg:pt-32 lg:pb-48 overflow-hidden bg-white">
-            <div class="max-w-7xl mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-16 items-center">
-                
-                <div class="z-10 order-2 lg:order-1">
-                    <div class="inline-flex items-center px-5 py-2 mb-8 rounded-full bg-red-50 border border-red-200 shadow-md">
-                        <span class="text-lg font-black tracking-widest text-red-600 uppercase">1日完結！</span>
-                    </div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg-text">CINEMATIC</div>
+        <div class="container hero-content fade-in">
+            <h1>Create The <span class="text-accent">Future</span></h1>
+            <p>1日で映像の「基礎」から「魔法」まで。<br>プロの現場ワークフローを体感する、濃密な映像制作ブートキャンプ。</p>
+            <a href="#about" class="btn">プロジェクト詳細を見る</a>
+        </div>
+    </section>
 
-                    <h1 class="font-black text-5xl lg:text-7xl leading-none mb-8 text-gray-900 animated-element" data-delay="1">
-                        プロと挑む、<br>
-                        映像制作の<span class="text-primary">現場体験</span>
-                    </h1>
-                    
-                    <p class="text-xl text-gray-600 mb-12 leading-relaxed max-w-lg font-medium animated-element" data-delay="2">
-                        「動画なんて作ったことがない…」そんなあなたこそ、大歓迎。<br>
-                        企画から編集までを走り抜ける濃密な体験。<br>
-                        自分の手で作品を生み出し、昨日より一歩成長した自分に出会いませんか？
-                    </p>
+    <!-- Project Overview -->
+    <section id="about" class="container">
+        <h2 class="section-title fade-in">Project Overview</h2>
+        <div class="overview-grid fade-in">
+            <div class="overview-text">
+                <h3>ただ撮るだけではない。<br>「伝わる」映像を創る。</h3>
+                <p>スマートフォンの進化により、誰でも綺麗な映像が撮れる時代になりました。しかし、「心を動かす映像」を作るには、機材以上のものが必要です。<br><br>
+                この1DAYプロジェクトでは、企画・構成・撮影・編集の全工程を1日で駆け抜けます。実践を通して、プロの視点とテクニックをインストールします。</p>
+            </div>
+            <div class="glass-card">
+                <p class="label">PLACE & DATE</p>
+                <p class="info-large">202X.12.10 (SAT)<br>TOKYO SHIBUYA STUDIO</p>
+                <p class="label">PRICE</p>
+                <p class="info-large text-accent">¥25,000 <span class="tax">(税込)</span></p>
+            </div>
+        </div>
+    </section>
 
-                    <div class="flex flex-col sm:flex-row gap-4 animated-element" data-delay="3">
-                        <a href="https://docs.google.com/forms/d/1nyiM4Ghv3oH6epXvyiGqKweY7v1uyEnul16L69Rp2aY/viewform" target="_blank" class="btn-modern inline-flex items-center justify-center px-10 py-4 text-base font-extrabold rounded-lg text-white bg-primary shadow-lg">
-                            今すぐエントリー
-                        </a>
-                        <!-- 修正: ボタンテキストを「プロジェクト概要」に変更済み -->
-                        <a href="#overview" class="btn-modern inline-flex items-center justify-center px-10 py-4 text-base font-extrabold rounded-lg text-primary bg-blue-50 hover:bg-blue-100 transition">
-                            プロジェクト概要
-                        </a>
-                    </div>
-                </div>
+    <!-- Target Audience -->
+    <section id="target" class="container">
+        <h2 class="section-title fade-in">Who is this for?</h2>
+        <p class="center-text fade-in">こんな方に参加して欲しい</p>
+        <div class="target-list fade-in">
+            <div class="target-item">
+                <h4>01. 映像クリエイター志望</h4>
+                <p>独学で限界を感じている方。プロの現場でのワークフローを知り、クオリティを一段階上げたい方。</p>
+            </div>
+            <div class="target-item">
+                <h4>02. SNSマーケター・広報</h4>
+                <p>自社の商品やサービスを、より魅力的に動画で伝えたい方。リールやYouTube運用の質を高めたい方。</p>
+            </div>
+            <div class="target-item">
+                <h4>03. クリエイティブな趣味を持ちたい方</h4>
+                <p>Vlogや旅行動画を映画のように残したい方。休日に新しいスキルを身につけたい方。</p>
+            </div>
+        </div>
+    </section>
 
-                <div class="relative order-1 lg:order-2 animated-element" data-delay="4">
-                    <div class="rounded-3xl overflow-hidden shadow-2xl img-hover-zoom aspect-[4/3] border border-gray-100">
-                        <!-- 修正: ヒーロー画像を新しい安定版URLに変更 -->
-                        <img src="https://images.unsplash.com/photo-1542204683-1492c10972b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" alt="本格的な映像撮影の現場" class="object-cover w-full h-full">
-                    </div>
+    <!-- Skills Gained -->
+    <section class="skills">
+        <div class="container">
+            <h2 class="section-title fade-in">Skills You Get</h2>
+            <div class="skills-grid fade-in">
+                <div class="skill-box">シネマティックな構図</div>
+                <div class="skill-box">照明・ライティング基礎</div>
+                <div class="skill-box">カラーグレーディング</div>
+                <div class="skill-box">ストーリーテリング</div>
+                <div class="skill-box">Premiere Pro / DaVinci</div>
+                <div class="skill-box">音響デザイン</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule -->
+    <section id="schedule" class="container">
+        <h2 class="section-title fade-in">1-Day Flow</h2>
+        <div class="timeline fade-in">
+            <div class="timeline-item">
+                <div class="time">10:00</div>
+                <div class="timeline-content">
+                    <h4>オリエンテーション & 企画論</h4>
+                    <p>「なぜ撮るのか？」を明確にするコンセプトワークと、絵コンテの描き方。</p>
                 </div>
             </div>
-        </section>
-
-
-        <!-- 2. プロジェクト概要 (Overview) -->
-        <section class="py-32 bg-surface" id="overview">
-            <div class="max-w-7xl mx-auto px-6 lg:px-12">
-                <div class="max-w-4xl mb-24 animated-element">
-                    <h2 class="text-5xl font-black text-gray-900 mb-4">プロジェクト概要</h2>
-                    <p class="text-2xl font-bold text-gray-600 leading-relaxed">
-                        教室では学べない、リアルな社会課題にクリエイティブで挑む。
-                    </p>
-                </div>
-                
-                <div class="grid md:grid-cols-3 gap-10">
-                    <!-- Card 1 -->
-                    <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-lg transition-shadow duration-300 group animated-element" data-delay="1">
-                        <div class="h-56 overflow-hidden border-b border-gray-100">
-                            <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="ボランティア活動の様子" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700">
-                        </div>
-                        <div class="p-8">
-                            <h3 class="text-xl font-bold mb-2 flex items-center gap-3">
-                                🤝 リアルな「現場」がある
-                            </h3>
-                            <p class="text-gray-600 leading-relaxed text-sm">
-                                実際に社会を変えようと動いているNPOや団体がパートナー。彼らの熱い想いに触れ、本気で応える経験があなたを強くします。
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Card 2 -->
-                    <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-lg transition-shadow duration-300 group animated-element" data-delay="2">
-                        <div class="h-56 overflow-hidden border-b border-gray-100">
-                            <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="スマホでの撮影" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700">
-                        </div>
-                        <div class="p-8">
-                            <h3 class="text-xl font-bold mb-2 flex items-center gap-3">
-                                📱 たった1分で、心を動かす
-                            </h3>
-                            <p class="text-gray-600 leading-relaxed text-sm">
-                                作るのは、スマホ時代の標準「縦型ショート動画」。あなたの作った映像が、誰かの心を動かし、社会を少しだけ前進させます。
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Card 3 -->
-                    <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-lg transition-shadow duration-300 group animated-element" data-delay="3">
-                        <div class="h-56 overflow-hidden border-b border-gray-100">
-                            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="チームでの議論" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700">
-                        </div>
-                        <div class="p-8">
-                            <h3 class="text-xl font-bold mb-2 flex items-center gap-3">
-                                🔥 「初めまして」から始まる熱狂
-                            </h3>
-                            <p class="text-gray-600 leading-relaxed text-sm">
-                                仲間は全員、初対面の学生。1つのゴールに向かって意見をぶつけ合い、1日が終わる頃には戦友のような絆が生まれます。
-                            </p>
-                        </div>
-                    </div>
+            <div class="timeline-item">
+                <div class="time">11:30</div>
+                <div class="timeline-content">
+                    <h4>撮影テクニック講座</h4>
+                    <p>カメラ設定、レンズの選び方、ジンバルワークの実践レクチャー。</p>
                 </div>
             </div>
-        </section>
-
-
-        <!-- 3. 1日の流れ (Schedule) -->
-        <section class="py-32 bg-white" id="schedule">
-            <div class="max-w-5xl mx-auto px-6 lg:px-12">
-                <div class="text-center mb-24 animated-element">
-                    <h2 class="text-5xl font-black text-gray-900 mb-6">制作の1日</h2>
-                    <p class="text-xl text-gray-500 font-medium">朝から夜まで、集中して最高のPR動画を生み出すフロー</p>
-                </div>
-                
-                <div class="relative">
-                    <!-- センターライン -->
-                    <div class="absolute left-1/2 top-0 bottom-0 w-px bg-gray-200 -translate-x-1/2 hidden md:block animated-element" style="animation-delay: 0.1s;"></div>
-                    
-                    <div class="space-y-24">
-                        <!-- Step 1 -->
-                        <div class="relative flex flex-col md:flex-row items-center justify-between animated-element" data-delay="1">
-                            <div class="md:w-5/12 order-2 md:order-1 text-right pr-0 md:pr-12">
-                                <span class="inline-block px-3 py-1 bg-blue-50 text-primary text-xs font-bold rounded-lg mb-2">9:00 - 10:00 (1h)</span>
-                                <h3 class="text-3xl font-black text-gray-900 mb-3">オリエンテーション＆企画会議</h3>
-                                <p class="text-gray-600 leading-relaxed">協力組織のミッション確認、動画の目的設定、ターゲット選定、コンセプト出し。</p>
-                            </div>
-                            <div class="z-10 order-1 md:order-2 mb-6 md:mb-0 timeline-dot">
-                                <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white font-black text-xl shadow-xl">1</div>
-                            </div>
-                            <div class="md:w-5/12 order-3 pl-0 md:pl-12">
-                                <!-- 修正: オリエンテーションの画像を設定 -->
-                                <img src="https://images.unsplash.com/photo-1531538606174-0f90ff5dce83?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="会議" class="rounded-xl shadow-md w-full h-48 object-cover border border-gray-100">
-                            </div>
-                        </div>
-
-                        <!-- Step 2 -->
-                        <div class="relative flex flex-col md:flex-row items-center justify-between animated-element" data-delay="2">
-                            <div class="md:w-5/12 order-3 md:order-1 pr-0 md:pr-12">
-                                <!-- 修正: アウトプット前半の画像を企画/構成のイメージに変更 -->
-                                <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="アイデア出しと構成会議" class="rounded-xl shadow-md w-full h-48 object-cover border border-gray-100">
-                            </div>
-                            <div class="z-10 order-1 md:order-2 mb-6 md:mb-0 timeline-dot">
-                                <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white font-black text-xl shadow-xl">2</div>
-                            </div>
-                            <div class="md:w-5/12 order-2 md:order-3 text-left pl-0 md:pl-12">
-                                <span class="inline-block px-3 py-1 bg-blue-50 text-primary text-xs font-bold rounded-lg mb-2">10:00 - 12:30 (2.5h)</span>
-                                <h3 class="text-3xl font-black text-gray-900 mb-3">アウトプット (前半)</h3>
-                                <p class="text-gray-600 leading-relaxed">企画に基づいた構成案の作成、素材の選定/撮影、簡易的な編集（後編）。</p>
-                            </div>
-                        </div>
-
-                        <!-- Step 3 (Lunch) -->
-                        <div class="relative flex flex-col items-center text-center animated-element" data-delay="3">
-                            <div class="z-20 mb-6 bg-white p-2 rounded-full relative">
-                                <div class="w-16 h-16 bg-white rounded-full border-4 border-gray-200 flex items-center justify-center text-gray-500 font-bold text-3xl shadow-lg">☕</div>
-                            </div>
-                            <div class="bg-white relative z-10 px-6 py-2 rounded-xl">
-                                <h3 class="text-xl font-bold text-gray-900 mb-1">中間フィードバック＆昼食</h3>
-                                <p class="text-gray-500 text-sm mb-4">12:30 - 14:00 (1.5h)</p>
-                                <p class="text-gray-600 max-w-md mx-auto">前半のアウトプットを元に講師から個別フィードバック。午後の編集方針を決定。</p>
-                            </div>
-                        </div>
-                        
-                        <!-- Step 4 -->
-                        <div class="relative flex flex-col md:flex-row items-center justify-between animated-element" data-delay="4">
-                            <div class="md:w-5/12 order-2 md:order-1 text-right pr-0 md:pr-12">
-                                <span class="inline-block px-3 py-1 bg-blue-50 text-primary text-xs font-bold rounded-lg mb-2">14:00 - 16:30 (2.5h)</span>
-                                <h3 class="text-3xl font-black text-gray-900 mb-3">アウトプット (後半)</h3>
-                                <p class="text-gray-600 leading-relaxed">フィードバックを元に本編集。テロップ、音楽、エフェクトなどを加え、完成度を高める。</p>
-                            </div>
-                            <div class="z-10 order-1 md:order-2 mb-6 md:mb-0 timeline-dot">
-                                <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white font-black text-xl shadow-xl">3</div>
-                            </div>
-                            <div class="md:w-5/12 order-3 pl-0 md:pl-12">
-                                <!-- 修正: アウトプット後半の画像を編集作業のイメージに変更 -->
-                                <img src="https://images.unsplash.com/photo-1574717432707-c2571979d165?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="PCでの動画編集作業" class="rounded-xl shadow-md w-full h-48 object-cover border border-gray-100">
-                            </div>
-                        </div>
-                        
-                        <!-- Step 5 -->
-                        <div class="relative flex flex-col md:flex-row items-center justify-between animated-element" data-delay="5">
-                            <div class="md:w-5/12 order-3 md:order-1 pr-0 md:pr-12">
-                                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="発表" class="rounded-xl shadow-md w-full h-48 object-cover border border-gray-100">
-                            </div>
-                            <div class="z-10 order-1 md:order-2 mb-6 md:mb-0 timeline-dot">
-                                <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white font-black text-xl shadow-xl">4</div>
-                            </div>
-                            <div class="md:w-5/12 order-2 md:order-3 text-left pl-0 md:pl-12">
-                                <span class="inline-block px-3 py-1 bg-blue-50 text-primary text-xs font-bold rounded-lg mb-2">16:30 - 18:00 (1.5h)</span>
-                                <h3 class="text-3xl font-black text-gray-900 mb-3">最終発表＆ネクストアクション</h3>
-                                <p class="text-gray-600 leading-relaxed">完成動画の発表、協力組織への納品。ネクストアクション設定。</p>
-                            </div>
-                        </div>
-                    </div>
+            <div class="timeline-item">
+                <div class="time">13:00</div>
+                <div class="timeline-content">
+                    <h4>実技：ショートムービー撮影</h4>
+                    <p>チームに分かれ、モデルを使って実際に街やスタジオで撮影を行います。</p>
                 </div>
             </div>
-        </section>
-
-
-        <!-- 4. 参加者が得られる力 (Benefits) -->
-        <section class="py-32 bg-surface" id="benefits">
-            <div class="max-w-7xl mx-auto px-6 lg:px-12">
-                <div class="text-center mb-20 animated-element">
-                    <h2 class="text-5xl font-black text-gray-900 mb-6">参加者が得られる力</h2>
-                    <p class="text-xl text-gray-500 font-medium">将来に活きる本質的なスキル</p>
-                </div>
-
-                <div class="grid lg:grid-cols-2 gap-10">
-                    <!-- 力1 -->
-                    <div class="bg-white p-12 rounded-3xl shadow-xl border border-gray-100 animated-element" data-delay="1">
-                        <span class="text-6xl mb-4 block">🧠</span>
-                        <h3 class="text-3xl font-black mb-4 text-gray-900">逆算力・論理的思考力</h3>
-                        <p class="font-extrabold text-xl text-primary mb-4">「いい動画」は、偶然生まれない。</p>
-                        <p class="text-gray-600 leading-relaxed text-base mb-6">
-                            誰の、どんな感情を動かしたいか？そのゴールから逆算して、初めて「何を撮るか」が決まります。感覚だけに頼らず、論理的にクリエイティブを組み立てる思考法は、あらゆる課題解決の強力な武器になります。
-                        </p>
-                        <ul class="space-y-2">
-                            <li class="flex items-start"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-primary mt-1 mr-2 flex-shrink-0"><path d="M20 6L9 17l-5-5"/></svg>本音を引き出す「問い」の設計</li>
-                            <li class="flex items-start"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-primary mt-1 mr-2 flex-shrink-0"><path d="M20 6L9 17l-5-5"/></svg>視聴者を離脱させない「構成」の計算</li>
-                        </ul>
-                    </div>
-                    
-                    <!-- 力2 -->
-                    <div class="bg-white p-12 rounded-3xl shadow-xl border border-gray-100 animated-element" data-delay="2">
-                        <span class="text-6xl mb-4 block">🎥</span>
-                        <h3 class="text-3xl font-black mb-4 text-gray-900">映像制作ノウハウ</h3>
-                        <p class="font-extrabold text-xl text-primary mb-4">スマホ1台で、世界観は作れる。</p>
-                        <p class="text-gray-600 leading-relaxed text-base mb-6">
-                            センスに頼らない、プロ直伝の「型」と「技術」を伝授します。PCや編集ソフトの操作は、当日に基礎からレクチャーするので安心です。
-                        </p>
-                        <ul class="space-y-2">
-                            <li class="flex items-start"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-primary mt-1 mr-2 flex-shrink-0"><path d="M20 6L9 17l-5-5"/></svg>コンセプト設計と企画の立て方</li>
-                            <li class="flex items-start"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-primary mt-1 mr-2 flex-shrink-0"><path d="M20 6L9 17l-5-5"/></svg>光の読み方、構図の美学などプロの撮影技術</li>
-                        </ul>
-                    </div>
+            <div class="timeline-item">
+                <div class="time">16:00</div>
+                <div class="timeline-content">
+                    <h4>編集 & カラーグレーディング</h4>
+                    <p>撮影素材を取り込み、カット編集から色味の調整までを集中的に行います。</p>
                 </div>
             </div>
-        </section>
-
-
-        <!-- 講師紹介 -->
-        <section class="py-32 bg-white" id="instructor">
-            <div class="max-w-5xl mx-auto px-6 lg:px-12 text-center">
-                <h2 class="text-5xl font-black text-gray-900 mb-6 animated-element">講師紹介</h2>
-                <p class="text-xl text-gray-500 font-medium mb-16 animated-element" data-delay="1">現役クリエイターが、あなたの才能を引き出す</p>
-
-                <div class="bg-surface p-12 rounded-3xl text-left border border-gray-200 shadow-lg hover:shadow-xl transition duration-500 animated-element" data-delay="2">
-                    <div class="flex flex-col md:flex-row items-center gap-12 mb-10">
-                        <div class="flex-shrink-0 relative">
-                            <!-- 写真 -->
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="講師写真" class="w-48 h-48 rounded-2xl object-cover border-4 border-white shadow-xl">
-                            <div class="absolute top-0 right-0 bg-primary text-white text-xs font-black px-4 py-1.5 rounded-full shadow-md -translate-y-2 translate-x-2 tracking-wider">PRO</div>
-                        </div>
-                        
-                        <div>
-                            <div class="mb-2">
-                                <h3 class="text-3xl font-black text-gray-900 inline-block mr-4">佐藤克哉</h3>
-                                <span class="text-sm font-bold text-gray-400 uppercase tracking-widest">KATSUYA SATO</span>
-                            </div>
-                            <p class="text-primary font-extrabold mb-6 text-lg">映像ディレクター</p>
-                            <p class="text-gray-600 leading-loose">
-                                企業のPRからブライダルまで幅広く映像・写真を手掛ける。法政大学出身。大学時代、マレーシアにて教育事業を立ち上げ、現在も学生のキャリア支援活動に注力している。
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <!-- 講師からのメッセージ -->
-                    <div class="bg-white p-8 rounded-2xl border-l-4 border-primary shadow-sm relative">
-                        <svg class="absolute top-4 left-4 w-8 h-8 text-gray-200 -z-0" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21L14.017 18C14.017 16.896 14.325 15.958 14.941 15.188C15.557 14.417 16.393 13.869 17.448 13.544L17.448 11.045C16.248 11.325 15.268 12.063 14.508 13.262C13.748 14.462 13.368 16.033 13.368 17.975L13.368 21L14.017 21ZM4.017 21L4.017 18C4.017 16.896 4.325 15.958 4.941 15.188C5.557 14.417 6.393 13.869 7.448 13.544L7.448 11.045C6.248 11.325 5.268 12.063 4.508 13.262C3.748 14.462 3.368 16.033 3.368 17.975L3.368 21L4.017 21Z"/></svg>
-                        <div class="relative z-10 text-gray-600 leading-relaxed italic pl-6">
-                            <p class="mb-4">
-                                学生の皆さんはじめまして。<br>
-                                僕は普段映像ディレクターとして、PRやドキュメンタリーを中心に活動しています。<br>
-                                映像をつくるときに一番大事にしているのは、「相手の想いにどれだけ向き合えるか」ということ。
-                            </p>
-                            <p class="mb-4">
-                                技術はもちろん大切ですが、<br>
-                                “何を感じ、どう切り取るか”はその人の人間性に直結します。
-                            </p>
-                            <p>
-                                この1dayプロジェクトでは、プロの撮影・編集・構成のノウハウをしっかり伝えつつ、<br>
-                                映像づくりを通して「自分の内側に気づく感覚」まで一緒に味わってほしいと思っています。
-                            </p>
-                        </div>
-                    </div>
+            <div class="timeline-item">
+                <div class="time">18:30</div>
+                <div class="timeline-content">
+                    <h4>上映会 & フィードバック</h4>
+                    <p>完成した作品をスクリーンで上映。講師からのプロ視点でのフィードバック。</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-
-        <!-- 5. CTA Section -->
-        <section class="py-32 relative overflow-hidden bg-primary" id="cta">
-            <div class="absolute inset-0 z-0 border-t border-b border-accentGray/50 shadow-inner"></div>
-
-            <div class="max-w-5xl mx-auto px-6 lg:px-12 text-center relative z-10 text-white">
-                <h2 class="text-4xl md:text-5xl font-extrabold mb-8 leading-tight mx-auto max-w-4xl">1day 映像制作プロジェクトに参加する</h2>
-                <p class="text-xl lg:text-2xl font-medium mb-16 text-blue-200">映像スキルを身につけ、社会にポジティブな変化を生み出す体験を</p>
-
-                <div class="max-w-3xl mx-auto text-left mb-16">
-                    <!-- 対象者 -->
-                    <div class="bg-white p-8 md:p-12 rounded-2xl text-gray-800 shadow-xl">
-                        <h3 class="text-2xl font-black mb-4 flex items-center gap-3 text-primary">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M16 21v-2a4 4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                            こんな人に参加してほしい
-                        </h3>
-                        <ul class="space-y-3 font-medium text-sm">
-                            <li class="flex items-start"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-primary mt-1 mr-2 flex-shrink-0"><path d="M20 6L9 17l-5-5"/></svg>大学生・大学院生（学年不問）</li>
-                            <li class="flex items-start"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-primary mt-1 mr-2 flex-shrink-0"><path d="M20 6L9 17l-5-5"/></svg>未経験者 大歓迎（機材知識不要）</li>
-                            <li class="flex items-start"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-primary mt-1 mr-2 flex-shrink-0"><path d="M20 6L9 17l-5-5"/></svg>機材持参 不要（スマホ1台でもOK）</li>
-                            <li class="flex items-start"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-primary mt-1 mr-2 flex-shrink-0"><path d="M20 6L9 17l-5-5"/></svg>動画制作の経験はないが、興味がある。</li>
-                            <li class="flex items-start"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-primary mt-1 mr-2 flex-shrink-0"><path d="M20 6L9 17l-5-5"/></svg>逆算力・論理的思考力をつけたい</li>
-                            <li class="flex items-start"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-primary mt-1 mr-2 flex-shrink-0"><path d="M20 6L9 17l-5-5"/></svg>なんか参加したいと思った</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <a href="https://docs.google.com/forms/d/1nyiM4Ghv3oH6epXvyiGqKweY7v1uyEnul16L69Rp2aY/viewform" target="_blank" class="btn-modern inline-flex items-center justify-center px-16 py-5 text-xl font-extrabold rounded-xl text-primary bg-white hover:bg-gray-100 shadow-2xl transition-all">
-                    今すぐエントリーする →
-                </a>
+    <!-- Instructor -->
+    <section id="instructor" class="container">
+        <h2 class="section-title fade-in">Instructor</h2>
+        <div class="instructor-container fade-in">
+            <div class="instructor-img">
+                <!-- 実際の画像URLに変更可能です -->
+                <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Instructor">
             </div>
-        </section>
-
-
-        <!-- 6. お問い合わせセクション (Contact) - 修正版: 可視化と確実なテキストカラー設定 -->
-        <section class="py-32 bg-white" id="contact">
-            <div class="max-w-4xl mx-auto px-6 lg:px-12 text-center">
-                
-                <h2 class="text-5xl font-black text-gray-900 mb-6 animated-element">お問い合わせ</h2>
-                
-                <p class="text-xl text-gray-600 mb-12 animated-element" data-delay="1">
-                    イベントに関するご質問や、詳細情報の確認は公式Instagramまで。<br>
-                    DMにてお気軽にご連絡ください。
-                </p>
-
-                <!-- Instagram CTA Card (可視化されたデザイン) -->
-                <div class="animated-element" data-delay="2">
-                    <a href="https://instagram.com/dummy_project_account" target="_blank" class="inline-flex items-center justify-center px-10 py-4 text-lg font-extrabold rounded-xl text-white transition-all w-full max-w-sm
-                        instagram-gradient cta-instagram-shadow transform hover:scale-[1.03] active:scale-[0.98]" 
-                        style="color: white !important;" 
-                    >
-                        <!-- InstagramアイコンのSVG (白) -->
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-3 fill-white/100 text-white">
-                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
-                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
-                        </svg>
-                        
-                        公式Instagramへ
-                    </a>
-                </div>
+            <div class="instructor-info">
+                <h4>KENJI YAMADA</h4>
+                <span class="instructor-role">Video Director / Cinematographer</span>
+                <p>ミュージックビデオや大手企業のWebCMを多数手がける映像ディレクター。
+                「感情を可視化する」をテーマに、光と色を駆使した映像表現を得意とする。
+                2022年、国際短編映画祭にてベスト・シネマトグラフィー賞を受賞。</p>
             </div>
-        </section>
+        </div>
+    </section>
 
-
-    </main>
-
-    <!-- フッター -->
-    <footer class="py-16 bg-gray-800">
-        <div class="max-w-7xl mx-auto px-6 lg:px-12 text-white text-center z-10">
-            <div class="text-xl font-black mb-4">1day 映像制作プロジェクト</div>
+    <!-- Contact -->
+    <section id="contact" class="contact">
+        <div class="container fade-in">
+            <h2 class="section-title">Join the Project</h2>
+            <p style="margin-bottom: 40px;">定員に達し次第、締め切らせていただきます。</p>
             
-            <nav class="flex justify-center gap-6 mb-8 text-sm font-medium">
-                <a href="#overview" class="hover:text-primary transition">概要</a>
-                <a href="#schedule" class="hover:text-primary transition">1日の流れ</a>
-                <a href="#benefits" class="hover:text-primary transition">得られる力</a>
-                <a href="#instructor" class="hover:text-primary transition">講師</a>
-                <a href="#contact" class="hover:text-primary transition">お問い合わせ</a>
-            </nav>
-            
-            <p class="text-xs text-gray-400">&copy; 2025 1day Project. All Rights Reserved. (このサイトはデモです)</p>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label>お名前</label>
+                    <input type="text" class="form-control" placeholder="山田 太郎">
+                </div>
+                <div class="form-group">
+                    <label>メールアドレス</label>
+                    <input type="email" class="form-control" placeholder="email@example.com">
+                </div>
+                <div class="form-group">
+                    <label>現在の映像制作スキル（任意）</label>
+                    <input type="text" class="form-control" placeholder="初心者 / 趣味程度 / 仕事で使用">
+                </div>
+                <div class="form-group center-btn">
+                    <button type="submit" class="btn full-width">プロジェクトに参加する</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 ONE DAY FILM PROJECT. All Rights Reserved.</p>
         </div>
     </footer>
-    
+
+    <!-- Animation Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+
+            const fadeElements = document.querySelectorAll('.fade-in');
+            fadeElements.forEach(el => observer.observe(el));
+        });
+    </script>
 </body>
 </html>
