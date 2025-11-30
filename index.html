@@ -7,15 +7,11 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Oswald:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Oswald:wght@400;600&display=swap" rel="stylesheet">
     <!-- CSS Link -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <!-- Custom Cursor -->
-    <div class="cursor-dot" id="cursor-dot"></div>
-    <div class="cursor-outline" id="cursor-outline"></div>
 
     <!-- Header -->
     <header>
@@ -34,78 +30,56 @@
         </div>
     </header>
 
-    <!-- Hero Section (Parallax & Video Feel) -->
+    <!-- Hero Section (Parallax Style) -->
     <section class="hero">
         <div class="hero-overlay"></div>
-        <div class="container hero-content fade-up">
-            <div class="hero-tag">202X.12.10 (SAT)</div>
-            <h1>CREATE THE<br><span class="text-stroke">FUTURE</span> OF VIDEO</h1>
-            <p class="hero-sub">プロと挑む、映像制作の現場体験。<br>
-            未経験から1日で「心を動かす」クリエイターへ。</p>
+        <div class="container hero-content fade-in-up">
+            <div class="hero-tag">1日完結！</div>
+            <h1>プロと挑む、<br>映像制作の<span class="text-accent">現場体験</span></h1>
+            <p>「動画なんて作ったことがない…」そんなあなたこそ、大歓迎。<br>
+            企画から編集までを走り抜ける濃密な体験。<br>
+            自分の手で作品を生み出し、昨日より一歩成長した自分に出会いませんか？</p>
             <div class="hero-btns">
-                <a href="https://docs.google.com/forms/d/1nyiM4Ghv3oH6epXvyiGqKweY7v1uyEnul16L69Rp2aY/viewform" target="_blank" class="btn btn-hero">エントリー</a>
-                <a href="#overview" class="btn btn-hero-outline">詳細を見る</a>
+                <a href="https://docs.google.com/forms/d/1nyiM4Ghv3oH6epXvyiGqKweY7v1uyEnul16L69Rp2aY/viewform" target="_blank" class="btn btn-hero">今すぐエントリー</a>
+                <a href="#overview" class="btn btn-hero-outline">プロジェクト概要</a>
             </div>
-        </div>
-        <div class="scroll-indicator">
-            <span>SCROLL</span>
-            <div class="line"></div>
         </div>
     </section>
 
-    <!-- プロジェクト概要 (Stacking Cards Effect) -->
-    <section id="overview" class="overview-section">
-        <div class="container">
-            <div class="section-header fade-up">
-                <h2 class="section-title">PROJECT OVERVIEW</h2>
-                <p class="center-text">教室では学べない、リアルな熱狂。</p>
+    <!-- プロジェクト概要 (Overview) -->
+    <section id="overview" class="container">
+        <h2 class="section-title fade-in-up">概要</h2>
+        
+        <div class="overview-concept fade-in-up">
+            <p class="concept-lead">教室では学べない、<br>リアルな社会課題に<span class="text-accent">クリエイティブ</span>で挑む。</p>
+            <p class="concept-desc">
+                教科書通りの正解はありません。目の前にあるのは、クライアントの「本気の想い」だけ。<br>
+                それをどう受け止め、どう映像という形にして、世の中に届けるか。<br>
+                プロの現場と同じ熱量で駆け抜ける、実践型ブートキャンプです。
+            </p>
+        </div>
+        
+        <div class="overview-features fade-in-up delay-1">
+            <div class="feature-card">
+                <div class="feature-number">01</div>
+                <div class="feature-text">
+                    <h3>リアルな「現場」がある</h3>
+                    <p>架空の課題ではありません。実際に社会を変えようと動いているNPOや団体がパートナー。彼らの熱い想いに触れ、本気で応える経験があなたを強くします。</p>
+                </div>
             </div>
-
-            <!-- Stacking Cards Wrapper -->
-            <div class="stacking-cards">
-                
-                <!-- Card 01 -->
-                <div class="stack-card" style="--index: 1;">
-                    <div class="stack-card-inner">
-                        <div class="stack-content">
-                            <span class="stack-num">01</span>
-                            <h3>リアルな<br>「現場」がある</h3>
-                            <p>架空の課題ではありません。実際に社会を変えようと動いているNPOや団体がパートナー。彼らの熱い想いに触れ、本気で応える経験があなたを強くします。</p>
-                        </div>
-                        <div class="stack-img reveal-image">
-                            <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="現場の様子">
-                        </div>
-                    </div>
+            <div class="feature-card">
+                <div class="feature-number">02</div>
+                <div class="feature-text">
+                    <h3>たった1分で、心を動かす</h3>
+                    <p>作るのは、スマホ時代の標準「縦型ショート動画」。あなたの作った映像が、誰かの心を動かし、社会を少しだけ前進させる瞬間を体験してください。</p>
                 </div>
-
-                <!-- Card 02 -->
-                <div class="stack-card" style="--index: 2;">
-                    <div class="stack-card-inner">
-                        <div class="stack-content">
-                            <span class="stack-num">02</span>
-                            <h3>たった1分で、<br>心を動かす</h3>
-                            <p>作るのは、スマホ時代の標準「縦型ショート動画」。あなたの作った映像が、誰かの心を動かし、社会を少しだけ前進させる瞬間を体験してください。</p>
-                        </div>
-                        <div class="stack-img reveal-image">
-                            <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="スマホ撮影">
-                        </div>
-                    </div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-number">03</div>
+                <div class="feature-text">
+                    <h3>「初めまして」から始まる熱狂</h3>
+                    <p>仲間は全員、初対面の学生。1つのゴールに向かって意見をぶつけ合い、1日が終わる頃には戦友のような絆が生まれます。</p>
                 </div>
-
-                <!-- Card 03 -->
-                <div class="stack-card" style="--index: 3;">
-                    <div class="stack-card-inner">
-                        <div class="stack-content">
-                            <span class="stack-num">03</span>
-                            <h3>「初めまして」から<br>始まる熱狂</h3>
-                            <p>仲間は全員、初対面の学生。1つのゴールに向かって意見をぶつけ合い、1日が終わる頃には戦友のような絆が生まれます。</p>
-                        </div>
-                        <div class="stack-img reveal-image">
-                            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="チームワーク">
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
@@ -113,68 +87,60 @@
     <!-- 1日の流れ (Schedule) -->
     <section id="schedule" class="bg-secondary">
         <div class="container">
-            <h2 class="section-title fade-up">SCHEDULE</h2>
-            <p class="center-text fade-up">濃密な1日。プロのワークフローを体感せよ。</p>
+            <h2 class="section-title fade-in-up">1日の流れ</h2>
+            <p class="center-text fade-in-up">朝から夜まで、集中して最高のPR動画を生み出すフロー</p>
             
             <div class="timeline">
                 <!-- Step 1 -->
-                <div class="timeline-item fade-in-scroll">
-                    <div class="time">09:00</div>
+                <div class="timeline-item fade-in-right">
+                    <div class="time">9:00 - 10:00</div>
                     <div class="timeline-content">
-                        <div class="timeline-img-wrapper reveal-image">
+                        <h4>オリエンテーション＆企画会議</h4>
+                        <p>協力組織のミッション確認、動画の目的設定、ターゲット選定、コンセプト出し。</p>
+                        <div class="timeline-img">
                             <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="会議">
-                        </div>
-                        <div class="timeline-text">
-                            <h4>オリエンテーション＆企画会議</h4>
-                            <p>クライアントの想いを聞き、動画のコンセプトを策定。「誰に、何を届けるか」を徹底的に議論します。</p>
                         </div>
                     </div>
                 </div>
                 <!-- Step 2 -->
-                <div class="timeline-item fade-in-scroll">
-                    <div class="time">10:00</div>
+                <div class="timeline-item fade-in-left">
+                    <div class="time">10:00 - 12:30</div>
                     <div class="timeline-content">
-                        <div class="timeline-img-wrapper reveal-image">
-                            <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="撮影">
-                        </div>
-                        <div class="timeline-text">
-                            <h4>撮影実習 (前半)</h4>
-                            <p>プロから構図とカメラワークを学び、即実践。街へ繰り出し、必要な素材を撮り集めます。</p>
+                        <h4>アウトプット (前半)</h4>
+                        <p>企画に基づいた構成案の作成、素材の選定/撮影、簡易的な編集（後編）。</p>
+                        <div class="timeline-img">
+                            <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="撮影風景">
                         </div>
                     </div>
                 </div>
                 <!-- Step 3 (Lunch) -->
-                <div class="timeline-item fade-in-scroll">
-                    <div class="time">12:30</div>
+                <div class="timeline-item fade-in-up">
+                    <div class="time">12:30 - 14:00</div>
                     <div class="timeline-content center-content">
-                        <span class="lunch-badge">BREAK TIME</span>
+                        <div class="lunch-icon">☕</div>
                         <h4>中間フィードバック＆昼食</h4>
-                        <p>前半の素材をチェックし、午後の方針を決定。</p>
+                        <p>前半のアウトプットを元に講師から個別フィードバック。午後の編集方針を決定。</p>
                     </div>
                 </div>
                 <!-- Step 4 -->
-                <div class="timeline-item fade-in-scroll">
-                    <div class="time">14:00</div>
+                <div class="timeline-item fade-in-right">
+                    <div class="time">14:00 - 16:30</div>
                     <div class="timeline-content">
-                        <div class="timeline-img-wrapper reveal-image">
-                            <img src="https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="編集">
-                        </div>
-                        <div class="timeline-text">
-                            <h4>本編集 (後半)</h4>
-                            <p>撮影した素材を一本の映像に。音楽、テロップ、エフェクトを加え、感情を揺さぶる作品へ仕上げます。</p>
+                        <h4>アウトプット (後半)</h4>
+                        <p>フィードバックを元に本編集。テロップ、音楽、エフェクトなどを加え、完成度を高める。</p>
+                        <div class="timeline-img">
+                            <img src="https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="動画編集">
                         </div>
                     </div>
                 </div>
                 <!-- Step 5 -->
-                <div class="timeline-item fade-in-scroll">
-                    <div class="time">16:30</div>
+                <div class="timeline-item fade-in-left">
+                    <div class="time">16:30 - 18:00</div>
                     <div class="timeline-content">
-                        <div class="timeline-img-wrapper reveal-image">
-                            <img src="https://images.unsplash.com/photo-1544531586-fde5298cdd40?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="発表">
-                        </div>
-                        <div class="timeline-text">
-                            <h4>上映会 & フィードバック</h4>
-                            <p>スクリーンで作品を上映。プロの講師とクライアントから直接フィードバックをもらいます。</p>
+                        <h4>最終発表＆ネクストアクション</h4>
+                        <p>完成動画の発表、協力組織への納品。ネクストアクション設定。</p>
+                        <div class="timeline-img">
+                            <img src="https://images.unsplash.com/photo-1544531586-fde5298cdd40?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="発表会">
                         </div>
                     </div>
                 </div>
@@ -182,165 +148,87 @@
         </div>
     </section>
 
-    <!-- 得られる力 (Benefits - Modern Grid) -->
+    <!-- 得られる力 (Benefits) -->
     <section id="benefits" class="container">
-        <h2 class="section-title fade-up">BENEFITS</h2>
-        <p class="center-text fade-up">持ち帰るのは、一生使える「武器」。</p>
+        <h2 class="section-title fade-in-up">得られる力</h2>
+        <p class="center-text fade-in-up">将来に活きる本質的なスキル</p>
 
-        <div class="benefits-grid">
-            <div class="benefit-card fade-up delay-1">
-                <div class="card-icon">🧠</div>
-                <h3>逆算力・論理的思考</h3>
-                <p>「なんとなく」で作らない。ゴールから逆算し、論理的にクリエイティブを設計する力。</p>
+        <div class="benefits-grid fade-in-up delay-1">
+            <div class="benefit-panel">
+                <div class="benefit-icon-area">
+                    <span class="b-icon">🧠</span>
+                </div>
+                <div class="benefit-text-area">
+                    <h3>逆算力・論理的思考力</h3>
+                    <p class="highlight">「いい動画」は、偶然生まれない。</p>
+                    <p>誰の、どんな感情を動かしたいか？そのゴールから逆算して、初めて「何を撮るか」が決まります。感覚だけに頼らず、論理的にクリエイティブを組み立てる思考法は、あらゆる課題解決の強力な武器になります。</p>
+                    <ul class="mini-list">
+                        <li>本音を引き出す「問い」の設計</li>
+                        <li>視聴者を離脱させない「構成」の計算</li>
+                    </ul>
+                </div>
             </div>
-            <div class="benefit-card fade-up delay-2">
-                <div class="card-icon">🎥</div>
-                <h3>撮影・編集スキル</h3>
-                <p>プロ直伝の構図、光の読み方、心を動かすカット割りの技術をインストール。</p>
-            </div>
-            <div class="benefit-card fade-up delay-3">
-                <div class="card-icon">🤝</div>
-                <h3>チームビルディング</h3>
-                <p>初対面のメンバーと短時間で成果を出す。社会で最も求められる協働力。</p>
-            </div>
-            <div class="benefit-card fade-up delay-4">
-                <div class="card-icon">🔥</div>
-                <h3>完遂する力</h3>
-                <p>限られた時間の中で、妥協せず作品を世に出す。強烈な成功体験。</p>
+
+            <div class="benefit-panel">
+                <div class="benefit-icon-area">
+                    <span class="b-icon">🎥</span>
+                </div>
+                <div class="benefit-text-area">
+                    <h3>映像制作ノウハウ</h3>
+                    <p class="highlight">スマホ1台で、世界観は作れる。</p>
+                    <p>センスに頼らない、プロ直伝の「型」と「技術」を伝授します。PCや編集ソフトの操作は、当日に基礎からレクチャーするので安心です。</p>
+                    <ul class="mini-list">
+                        <li>コンセプト設計と企画の立て方</li>
+                        <li>光の読み方、構図の美学などプロの撮影技術</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- 講師紹介 (Instructor) -->
     <section id="instructor" class="bg-secondary">
-        <div class="container fade-up">
-            <h2 class="section-title">INSTRUCTOR</h2>
+        <div class="container fade-in-up">
+            <h2 class="section-title">講師紹介</h2>
             <div class="instructor-container">
-                <div class="instructor-visual reveal-image">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="佐藤克哉">
+                <div class="instructor-visual">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="佐藤克哉">
                 </div>
                 <div class="instructor-content">
                     <div class="instructor-header">
                         <h4>佐藤克哉 <span class="en-name">KATSUYA SATO</span></h4>
-                        <span class="instructor-role">VIDEO DIRECTOR</span>
+                        <span class="instructor-role">映像ディレクター</span>
                     </div>
                     <p class="bio">企業のPRからブライダルまで幅広く映像・写真を手掛ける。法政大学出身。大学時代、マレーシアにて教育事業を立ち上げ、現在も学生のキャリア支援活動に注力している。</p>
-                    <div class="msg-quote">
-                        "映像とは、感情の翻訳だ。<br>君の視点で、世界を切り取れ。"
+                    
+                    <div class="instructor-message-box">
+                        <p><strong>学生の皆さんはじめまして。</strong><br>
+                        僕は普段映像ディレクターとして、PRやドキュメンタリーを中心に活動しています。映像をつくるときに一番大事にしているのは、「相手の想いにどれだけ向き合えるか」ということ。</p>
+                        <p>技術はもちろん大切ですが、“何を感じ、どう切り取るか”はその人の人間性に直結します。</p>
+                        <p>この1dayプロジェクトでは、プロの撮影・編集・構成のノウハウをしっかり伝えつつ、映像づくりを通して「自分の内側に気づく感覚」まで一緒に味わってほしいと思っています。</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ターゲット (Infinite Marquee) -->
-    <section id="target" class="target-section-dynamic">
-        <!-- 背景の流れる文字 -->
-        <div class="marquee-wrapper">
-            <div class="marquee-content">
-                WHO IS THIS FOR? WHO IS THIS FOR? WHO IS THIS FOR? WHO IS THIS FOR? 
-            </div>
-            <div class="marquee-content">
-                WHO IS THIS FOR? WHO IS THIS FOR? WHO IS THIS FOR? WHO IS THIS FOR? 
-            </div>
-        </div>
-
-        <div class="container relative-z fade-up">
-            <div class="target-box-glass">
-                <h2>JOIN THE PROJECT</h2>
+    <!-- ターゲット / CTA (Light Theme) -->
+    <section id="target" class="target-section-light">
+        <div class="container fade-in-up">
+            <div class="target-wrapper">
+                <h2>1day 映像制作プロジェクトに参加する</h2>
                 <p class="target-sub">その一歩が、未来のクリエイティブを変える。</p>
                 
-                <div class="check-grid">
-                    <div class="check-item">大学生・大学院生</div>
-                    <div class="check-item">未経験者 大歓迎</div>
-                    <div class="check-item">機材持参 不要</div>
-                    <div class="check-item">動画に興味がある</div>
-                    <div class="check-item">思考力をつけたい</div>
-                    <div class="check-item">成長したい</div>
+                <div class="target-card-light">
+                    <p class="list-title">こんな方に参加して欲しい</p>
+                    <ul class="refined-list-dark">
+                        <li>大学生・大学院生（学年不問）</li>
+                        <li>未経験者 大歓迎（機材知識不要）</li>
+                        <li>機材持参 不要（スマホ1台でもOK）</li>
+                        <li>動画制作の経験はないが、興味がある</li>
+                        <li>逆算力・論理的思考力をつけたい</li>
+                        <li>なんか参加したいと思った</li>
+                    </ul>
                 </div>
 
-                <a href="https://docs.google.com/forms/d/1nyiM4Ghv3oH6epXvyiGqKweY7v1uyEnul16L69Rp2aY/viewform" target="_blank" class="btn btn-cta-main">今すぐエントリーする</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="contact-light">
-        <div class="container fade-up">
-            <h2 class="section-title">CONTACT</h2>
-            <p style="margin-bottom: 40px; color: #64748b;">
-                ご質問は公式InstagramのDMへ。<br>
-                お気軽にご連絡ください。
-            </p>
-            <a href="https://instagram.com/dummy_project_account" target="_blank" class="btn btn-instagram">
-                INSTAGRAM
-            </a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 1day Project. All Rights Reserved.</p>
-        </div>
-    </footer>
-
-    <!-- JS for Cursor & Scroll Animations -->
-    <script>
-        // Custom Cursor Logic
-        const cursorDot = document.getElementById('cursor-dot');
-        const cursorOutline = document.getElementById('cursor-outline');
-
-        window.addEventListener('mousemove', (e) => {
-            const posX = e.clientX;
-            const posY = e.clientY;
-
-            cursorDot.style.left = `${posX}px`;
-            cursorDot.style.top = `${posY}px`;
-
-            // 少し遅れてついてくるアニメーション
-            cursorOutline.animate({
-                left: `${posX}px`,
-                top: `${posY}px`
-            }, { duration: 500, fill: "forwards" });
-        });
-
-        // Add hover effect to links
-        const links = document.querySelectorAll('a, button, .stack-card');
-        links.forEach(link => {
-            link.addEventListener('mouseenter', () => {
-                cursorOutline.style.transform = 'translate(-50%, -50%) scale(1.5)';
-                cursorOutline.style.backgroundColor = 'rgba(37, 99, 235, 0.1)';
-            });
-            link.addEventListener('mouseleave', () => {
-                cursorOutline.style.transform = 'translate(-50%, -50%) scale(1)';
-                cursorOutline.style.backgroundColor = 'transparent';
-            });
-        });
-
-        // Scroll Observer Logic
-        document.addEventListener('DOMContentLoaded', () => {
-            const observerOptions = {
-                root: null,
-                rootMargin: '0px 0px -100px 0px',
-                threshold: 0.1
-            };
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        // 画像の場合は特別なクラスをつける
-                        if(entry.target.classList.contains('reveal-image')) {
-                            entry.target.classList.add('active');
-                        }
-                    }
-                });
-            }, observerOptions);
-
-            const animElements = document.querySelectorAll('.fade-up, .fade-in-scroll, .reveal-image');
-            animElements.forEach(el => observer.observe(el));
-        });
-    </script>
-</body>
-</html>
+                <a href="https://docs.google.com/forms/d/1nyiM4Ghv3oH6epXvyiGqKweY7
