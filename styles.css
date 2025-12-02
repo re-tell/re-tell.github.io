@@ -127,7 +127,7 @@ nav { display: flex; justify-content: space-between; align-items: center; }
     
     /* ▼▼▼ ここでアップロードした画像を指定しています ▼▼▼ */
     /* もしファイル名が違う場合は、'hero-bg.jpg' の部分を書き換えてください */
-    background: url('hero-bg.jpg') no-repeat center center;
+    background: url('Gemini_Generated_Image_4lxcrr4lxcrr4lxc.png') no-repeat center center;
     
     background-size: cover;
     background-attachment: fixed; /* パララックス効果 */
