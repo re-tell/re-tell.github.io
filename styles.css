@@ -127,7 +127,7 @@ nav { display: flex; justify-content: space-between; align-items: center; }
     
     /* ▼▼▼ ここでアップロードした画像を指定しています ▼▼▼ */
     /* もしファイル名が違う場合は、'hero-bg.jpg' の部分を書き換えてください */
-    background: url('hero.png') no-repeat center center;
+    background: url('hero2.png') no-repeat center center;
     
     background-size: cover;
     background-attachment: fixed; /* パララックス効果 */
