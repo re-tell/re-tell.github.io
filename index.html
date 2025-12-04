@@ -159,6 +159,10 @@
                     </div>
                 </div>
             </div>
+            
+            <!-- スケジュール変更に関する注意書きを追加 -->
+            <p class="schedule-note">※協力団体の都合により、スケジュールは変更になる可能性があります。<br>あくまで目安としてご確認ください。</p>
+
         </div>
     </section>
 
@@ -216,7 +220,7 @@
                         <p>この1dayプロジェクトでは、プロの撮影・編集・構成のノウハウをしっかり伝えつつ、映像づくりを通して「自分の内側に気づく感覚」まで一緒に味わってほしいと思っています。</p>
                     </div>
 
-                    <!-- 追加: FAQ風の講師の実績 -->
+                    <!-- FAQ風の講師の実績 -->
                     <div class="accordion-wrapper">
                         <button class="accordion-header">
                             <span>講師の実績</span>
@@ -224,7 +228,6 @@
                         </button>
                         <div class="accordion-content">
                             <ul class="achievement-list">
-                                <!-- ここの中身は適宜変更してください -->
                                 <li>大手飲料メーカー Web CM制作 / 100万回再生突破</li>
                                 <li>スタートアップ企業 採用ブランディング動画 / 企画・撮影・編集</li>
                                 <li>アーティストMV制作 / 国際短編映画祭ノミネート作品撮影</li>
@@ -239,7 +242,7 @@
         </div>
     </section>
 
-   <!-- ターゲット / CTA (Light Theme) -->
+    <!-- ターゲット / CTA (Light Theme) -->
     <section id="target" class="target-section-light">
         <div class="container fade-in-up">
             <div class="target-wrapper">
@@ -247,46 +250,15 @@
                 <p class="target-sub">その一歩が、未来のクリエイティブを変える。</p>
                 
                 <div class="target-card-light">
-                    <!-- ターゲットリスト -->
                     <p class="list-title">こんな方に参加して欲しい</p>
                     <ul class="refined-list-dark">
-                        <li>大学生・大学院生（学年不問）</li>
+                        <!-- リスト内容を修正しました -->
+                        <li>高校・大学・大学院生（学年不問）</li>
                         <li>未経験者 大歓迎（機材知識不要）</li>
                         <li>機材持参 不要（スマホ1台でもOK）</li>
                         <li>動画制作の経験はないが、興味がある</li>
                         <li>逆算力・論理的思考力をつけたい</li>
-                        <li>なんか参加したいと思った</li>
                     </ul>
-
-                    <!-- 追加: 持ち物セクション -->
-                    <div class="belongings-container">
-                        <div class="divider-line"></div>
-                        <p class="list-title">当日の持ち物</p>
-                        
-                        <div class="belongings-grid">
-                            <!-- スマホ（必須） -->
-                            <div class="belonging-item required-item">
-                                <div class="item-icon">📱</div>
-                                <div class="item-info">
-                                    <span class="item-name">スマートフォン</span>
-                                    <span class="item-desc">これさえあればOK</span>
-                                </div>
-                                <div class="item-badge">必須</div>
-                            </div>
-
-                            <!-- モバイルバッテリー（推奨） -->
-                            <div class="belonging-item recommended-item">
-                                <div class="item-icon">🔋</div>
-                                <div class="item-info">
-                                    <span class="item-name">モバイルバッテリー</span>
-                                    <span class="item-desc">あると安心</span>
-                                </div>
-                                <div class="item-badge gray">推奨</div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- 追加ここまで -->
-
                 </div>
 
                 <a href="https://docs.google.com/forms/d/1nyiM4Ghv3oH6epXvyiGqKweY7v1uyEnul16L69Rp2aY/viewform" target="_blank" class="btn btn-cta-main">今すぐエントリーする</a>
@@ -315,10 +287,9 @@
         </div>
     </footer>
 
-    <!-- Dynamic Scroll Animation & Accordion Script -->
+    <!-- Scripts -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Scroll Animation Logic
             const observerOptions = {
                 root: null,
                 rootMargin: '0px 0px -50px 0px',
@@ -341,7 +312,7 @@
             fadeRightElements.forEach(el => observer.observe(el));
             fadeLeftElements.forEach(el => observer.observe(el));
 
-            // Accordion Logic (FAQ Style)
+            // Accordion Logic
             const accordionHeader = document.querySelector('.accordion-header');
             const accordionContent = document.querySelector('.accordion-content');
             const accordionIcon = document.querySelector('.accordion-icon');
@@ -351,13 +322,11 @@
                     accordionHeader.classList.toggle('active');
                     
                     if (accordionHeader.classList.contains('active')) {
-                        // Open
                         accordionContent.style.maxHeight = accordionContent.scrollHeight + "px";
-                        accordionIcon.textContent = "−"; // マイナスにする
+                        accordionIcon.textContent = "−";
                     } else {
-                        // Close
                         accordionContent.style.maxHeight = 0;
-                        accordionIcon.textContent = "+"; // プラスに戻す
+                        accordionIcon.textContent = "+";
                     }
                 });
             }
