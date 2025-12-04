@@ -194,13 +194,12 @@
         </div>
     </section>
 
-    <!-- 講師紹介 (Instructor) -->
+    <!-- 講師紹介 (Instructor with FAQ Style Achievements) -->
     <section id="instructor" class="bg-secondary">
         <div class="container fade-in-up">
             <h2 class="section-title">講師紹介</h2>
             <div class="instructor-container">
                 <div class="instructor-visual">
-                    <!-- ▼▼▼ ここを更新しました（instructor.jpg） ▼▼▼ -->
                     <img src="instructor.jpg" alt="佐藤克哉">
                 </div>
                 <div class="instructor-content">
@@ -216,6 +215,25 @@
                         <p>技術はもちろん大切ですが、“何を感じ、どう切り取るか”はその人の人間性に直結します。</p>
                         <p>この1dayプロジェクトでは、プロの撮影・編集・構成のノウハウをしっかり伝えつつ、映像づくりを通して「自分の内側に気づく感覚」まで一緒に味わってほしいと思っています。</p>
                     </div>
+
+                    <!-- 追加: FAQ風の講師の実績 -->
+                    <div class="accordion-wrapper">
+                        <button class="accordion-header">
+                            <span>講師の実績</span>
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <ul class="achievement-list">
+                                <!-- ここの中身は適宜変更してください -->
+                                <li>大手飲料メーカー Web CM制作 / 100万回再生突破</li>
+                                <li>スタートアップ企業 採用ブランディング動画 / 企画・撮影・編集</li>
+                                <li>アーティストMV制作 / 国際短編映画祭ノミネート作品撮影</li>
+                                <li>教育系YouTubeチャンネル運営支援 / 登録者5万人増に貢献</li>
+                                <li>地方自治体 観光PR動画 / コンペティション最優秀賞受賞</li>
+                            </ul>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -266,9 +284,10 @@
         </div>
     </footer>
 
-    <!-- Dynamic Scroll Animation Script -->
+    <!-- Dynamic Scroll Animation & Accordion Script -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            // Scroll Animation Logic
             const observerOptions = {
                 root: null,
                 rootMargin: '0px 0px -50px 0px',
@@ -290,6 +309,27 @@
             fadeUpElements.forEach(el => observer.observe(el));
             fadeRightElements.forEach(el => observer.observe(el));
             fadeLeftElements.forEach(el => observer.observe(el));
+
+            // Accordion Logic (FAQ Style)
+            const accordionHeader = document.querySelector('.accordion-header');
+            const accordionContent = document.querySelector('.accordion-content');
+            const accordionIcon = document.querySelector('.accordion-icon');
+
+            if (accordionHeader) {
+                accordionHeader.addEventListener('click', () => {
+                    accordionHeader.classList.toggle('active');
+                    
+                    if (accordionHeader.classList.contains('active')) {
+                        // Open
+                        accordionContent.style.maxHeight = accordionContent.scrollHeight + "px";
+                        accordionIcon.textContent = "−"; // マイナスにする
+                    } else {
+                        // Close
+                        accordionContent.style.maxHeight = 0;
+                        accordionIcon.textContent = "+"; // プラスに戻す
+                    }
+                });
+            }
         });
     </script>
 </body>
