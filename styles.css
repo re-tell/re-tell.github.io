@@ -510,3 +510,88 @@ footer {
     
     .refined-list-dark { grid-template-columns: 1fr; }
 }
+/* --- Belongings Section (Add to bottom) --- */
+.belongings-container {
+    margin-top: 40px;
+    width: 100%;
+}
+
+.divider-line {
+    width: 100%;
+    height: 1px;
+    background-color: var(--border-color);
+    margin-bottom: 40px;
+}
+
+.belongings-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.belonging-item {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border: 1px solid var(--border-color);
+    padding: 15px 25px;
+    border-radius: 12px;
+    min-width: 280px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    transition: 0.3s;
+}
+
+/* スマホを目立たせる */
+.belonging-item.required-item {
+    border-color: var(--accent-color);
+    background: #f0f7ff; /* 薄い青背景 */
+}
+
+.item-icon {
+    font-size: 2rem;
+    margin-right: 15px;
+}
+
+.item-info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    flex: 1;
+}
+
+.item-name {
+    font-weight: bold;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.item-desc {
+    font-size: 0.8rem;
+    color: var(--text-light);
+}
+
+.item-badge {
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: #fff;
+    background: var(--accent-color);
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin-left: 10px;
+}
+
+.item-badge.gray {
+    background: #94a3b8;
+}
+
+@media (max-width: 768px) {
+    .belongings-grid {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .belonging-item {
+        width: 100%;
+        min-width: auto;
+    }
+}
