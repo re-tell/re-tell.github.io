@@ -68,7 +68,7 @@ img { max-width: 100%; display: block; }
 .btn-hero {
     background: var(--accent-color); color: #fff; border: 2px solid var(--accent-color);
 }
-.btn-hero-hover {
+.btn-hero:hover {
     background: #fff; color: var(--accent-color);
 }
 .btn-hero-outline {
@@ -120,7 +120,7 @@ nav { display: flex; justify-content: space-between; align-items: center; }
 .hero {
     height: 100vh;
     width: 100%;
-    /* 正しい画像名に指定 */
+    /* 正しい画像名 */
     background: url('hero2.png') no-repeat center center;
     background-size: cover;
     background-attachment: fixed;
@@ -327,41 +327,60 @@ section { padding: 100px 0; }
 .link-arrow { font-size: 0.8rem; color: var(--accent-color); }
 
 
-/* --- Items to Bring (New Section) --- */
-.gear-panel {
-    display: flex; border: 1px solid var(--border-color); border-radius: 20px; overflow: hidden;
-    background: #fff; box-shadow: var(--shadow-soft); max-width: 800px; margin: 0 auto;
-}
-.gear-main {
-    width: 45%; background: #fff; padding: 50px 30px; text-align: center;
-    border-right: 1px solid var(--border-color); display: flex; flex-direction: column; align-items: center; justify-content: center;
-    position: relative;
-}
-.gear-sub {
-    width: 55%; background: #f8fafc; padding: 50px 40px; display: flex; flex-direction: column; justify-content: center;
+/* --- Items to Bring (Visual Style) --- */
+.items-visual-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 30px; max-width: 900px; margin: 0 auto;
 }
 
-.gear-label {
-    font-family: var(--font-en); font-size: 0.8rem; letter-spacing: 2px; font-weight: bold;
-    padding: 4px 12px; border-radius: 50px; margin-bottom: 20px; display: inline-block;
+/* Must Have Card */
+.item-visual-card {
+    position: relative; border-radius: 20px; overflow: hidden;
+    box-shadow: var(--shadow-soft); transition: 0.3s;
+    background: #fff; border: 1px solid var(--border-color);
+    display: flex; flex-direction: column;
 }
-.gear-label.required { background: var(--accent-color); color: #fff; }
-.gear-label.recommended { background: #e2e8f0; color: #64748b; }
-
-.gear-content h3 { font-size: 2rem; font-weight: bold; margin-bottom: 10px; color: var(--text-color); }
-.gear-content p { color: var(--text-light); font-size: 0.9rem; line-height: 1.6; }
-
-.gear-list { list-style: none; padding: 0; margin: 0; }
-.gear-list li { display: flex; gap: 15px; margin-bottom: 20px; }
-.gear-list li:last-child { margin-bottom: 0; }
-.check-icon {
-    width: 24px; height: 24px; background: #fff; border: 1px solid #cbd5e1; border-radius: 50%;
-    display: flex; align-items: center; justify-content: center; color: var(--accent-color); font-weight: bold; font-size: 0.8rem;
-    flex-shrink: 0;
+.item-visual-card.must-have {
+    color: #fff; height: 320px;
 }
-.gear-text { display: flex; flex-direction: column; }
-.gear-text strong { font-size: 1rem; color: var(--text-color); }
-.gear-text span { font-size: 0.85rem; color: #94a3b8; }
+.item-bg-img {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+}
+.item-bg-img img {
+    width: 100%; height: 100%; object-fit: cover; transition: 0.5s;
+}
+.item-visual-card:hover .item-bg-img img { transform: scale(1.1); }
+.item-overlay {
+    position: absolute; bottom: 0; left: 0; width: 100%;
+    padding: 30px; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    z-index: 2;
+}
+.item-tag {
+    display: inline-block; padding: 4px 12px; border-radius: 50px;
+    font-size: 0.8rem; font-weight: bold; margin-bottom: 10px;
+}
+.item-tag.required { background: var(--accent-color); color: #fff; }
+.item-tag.option { background: #e2e8f0; color: #64748b; }
+
+.item-overlay h3 { font-size: 1.8rem; font-weight: bold; margin-bottom: 5px; color: #fff; }
+.item-overlay p { font-size: 0.95rem; color: #e2e8f0; }
+
+/* Recommended Card */
+.item-visual-card.recommended-have {
+    padding: 40px; background: #f8fafc; justify-content: center;
+}
+.item-visual-card.recommended-have h3 {
+    font-size: 1.5rem; font-weight: bold; margin: 15px 0 30px; color: var(--text-color);
+}
+.rec-grid { display: flex; flex-direction: column; gap: 20px; }
+.rec-item { display: flex; align-items: flex-start; gap: 15px; }
+.rec-icon {
+    width: 40px; height: 40px; background: #fff; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--accent-color); box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+.rec-icon svg { width: 20px; height: 20px; }
+.rec-text h4 { font-size: 1rem; font-weight: bold; margin-bottom: 2px; }
+.rec-text p { font-size: 0.85rem; color: #64748b; margin: 0; }
 
 
 /* --- Target / CTA --- */
@@ -428,10 +447,9 @@ footer { background: #fff; color: #94a3b8; padding: 30px 0; text-align: center; 
     .instructor-visual img { margin: 0; width: 100%; border-radius: 12px 12px 0 0; }
     .instructor-content { padding: 30px; }
     
-    /* Gear Panel Mobile */
-    .gear-panel { flex-direction: column; }
-    .gear-main, .gear-sub { width: 100%; border-right: none; padding: 40px 20px; }
-    .gear-main { border-bottom: 1px solid var(--border-color); }
+    /* Items Visual Grid Mobile */
+    .items-visual-grid { grid-template-columns: 1fr; }
+    .item-visual-card.must-have { height: 250px; }
 
     .refined-list-dark { grid-template-columns: 1fr; }
 }
