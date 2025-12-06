@@ -68,7 +68,7 @@ img { max-width: 100%; display: block; }
 .btn-hero {
     background: var(--accent-color); color: #fff; border: 2px solid var(--accent-color);
 }
-.btn-hero:hover {
+.btn-hero-hover {
     background: #fff; color: var(--accent-color);
 }
 .btn-hero-outline {
@@ -120,6 +120,7 @@ nav { display: flex; justify-content: space-between; align-items: center; }
 .hero {
     height: 100vh;
     width: 100%;
+    /* 正しい画像名に指定 */
     background: url('hero2.png') no-repeat center center;
     background-size: cover;
     background-attachment: fixed;
