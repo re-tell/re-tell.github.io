@@ -120,7 +120,6 @@ nav { display: flex; justify-content: space-between; align-items: center; }
 .hero {
     height: 100vh;
     width: 100%;
-    /* 正しい画像名 */
     background: url('hero2.png') no-repeat center center;
     background-size: cover;
     background-attachment: fixed;
@@ -364,9 +363,10 @@ section { padding: 100px 0; }
 .item-overlay h3 { font-size: 1.8rem; font-weight: bold; margin-bottom: 5px; color: #fff; }
 .item-overlay p { font-size: 0.95rem; color: #e2e8f0; }
 
-/* Recommended Card */
+/* Recommended Card (Updated to match visual weight) */
 .item-visual-card.recommended-have {
     padding: 40px; background: #f8fafc; justify-content: center;
+    border-left: 4px solid var(--accent-color); /* 左にアクセントライン */
 }
 .item-visual-card.recommended-have h3 {
     font-size: 1.5rem; font-weight: bold; margin: 15px 0 30px; color: var(--text-color);
