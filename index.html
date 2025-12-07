@@ -7,7 +7,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Oswald:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Oswald:wght@400;600&display=swap" rel="stylesheet">
     <!-- CSS Link -->
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -166,7 +166,7 @@
         </div>
     </section>
 
-    <!-- 得られる力 (Benefits - No Icons) -->
+    <!-- 得られる力 (Benefits) -->
     <section id="benefits" class="container">
         <h2 class="section-title fade-in-up">得られる力</h2>
         <p class="center-text fade-in-up">将来に活きる本質的なスキル</p>
@@ -198,7 +198,7 @@
         </div>
     </section>
 
-    <!-- 講師紹介 (Instructor with FAQ Style Achievements) -->
+    <!-- 講師紹介 (Instructor) -->
     <section id="instructor" class="bg-secondary">
         <div class="container fade-in-up">
             <h2 class="section-title">講師紹介</h2>
@@ -220,7 +220,7 @@
                         <p>この1dayプロジェクトでは、プロの撮影・編集・構成のノウハウをしっかり伝えつつ、映像づくりを通して「自分の内側に気づく感覚」まで一緒に味わってほしいと思っています。</p>
                     </div>
 
-                    <!-- 講師の実績 (FAQ Style with Links) -->
+                    <!-- 講師の実績 -->
                     <div class="accordion-wrapper">
                         <button class="accordion-header">
                             <span>講師の実績 / WORKS</span>
@@ -258,24 +258,32 @@
         </div>
     </section>
 
-    <!-- 持ち物 (Items - No Images, Modern Grid Design) -->
+    <!-- 持ち物 (Items - Vivid & Attractive) -->
     <section id="items" class="container">
         <h2 class="section-title fade-in-up">持ち物</h2>
         <p class="center-text fade-in-up">身軽に参加できます</p>
 
         <div class="gear-grid fade-in-up delay-1">
             
-            <!-- Must Have: Smartphone (Big Card) -->
+            <!-- Must Have: Smartphone (Vivid Card) -->
             <div class="gear-card primary">
+                <!-- 装飾用の背景アイコン -->
+                <div class="card-bg-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M10.5 1.875a3.375 3.375 0 00-3.375 3.375v13.5A3.375 3.375 0 0010.5 22.125h3a3.375 3.375 0 003.375-3.375V5.25a3.375 3.375 0 00-3.375-3.375h-3zM9.75 5.25a.75.75 0 01.75-.75h3a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-3a.75.75 0 01-.75-.75v-.75z" />
+                    </svg>
+                </div>
+                
                 <div class="gear-header">
                     <span class="gear-badge required">必須</span>
-                    <div class="gear-icon-large">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.2" stroke="currentColor">
+                </div>
+                <div class="gear-body">
+                    <!-- メインアイコン -->
+                    <div class="gear-icon-main">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
                         </svg>
                     </div>
-                </div>
-                <div class="gear-body">
                     <h3>スマホ</h3>
                     <p>iPhone / Android</p>
                 </div>
@@ -283,15 +291,15 @@
 
             <!-- Recommended: Battery -->
             <div class="gear-card secondary">
-                <div class="gear-header">
-                    <span class="gear-badge recommended">推奨</span>
-                    <div class="gear-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <div class="gear-icon-side">
+                    <div class="icon-circle">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
                         </svg>
                     </div>
                 </div>
-                <div class="gear-body">
+                <div class="gear-info">
+                    <span class="gear-badge recommended">推奨</span>
                     <h3>モバイルバッテリー</h3>
                     <p>撮影は充電を消費します</p>
                 </div>
@@ -299,15 +307,15 @@
 
             <!-- Recommended: PC -->
             <div class="gear-card secondary">
-                <div class="gear-header">
-                    <span class="gear-badge recommended">推奨</span>
-                    <div class="gear-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <div class="gear-icon-side">
+                    <div class="icon-circle">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25" />
                         </svg>
                     </div>
                 </div>
-                <div class="gear-body">
+                <div class="gear-info">
+                    <span class="gear-badge recommended">推奨</span>
                     <h3>パソコン</h3>
                     <p>大画面で編集したい方</p>
                 </div>
@@ -316,7 +324,7 @@
         </div>
     </section>
 
-    <!-- ターゲット / CTA (Light Theme) -->
+    <!-- ターゲット / CTA -->
     <section id="target" class="target-section-light">
         <div class="container fade-in-up">
             <div class="target-wrapper">
@@ -339,7 +347,7 @@
         </div>
     </section>
 
-    <!-- Contact (Light Theme) -->
+    <!-- Contact -->
     <section id="contact" class="contact-light">
         <div class="container fade-in-up">
             <h2 class="section-title">お問い合わせ</h2>
