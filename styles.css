@@ -326,7 +326,7 @@ section { padding: 100px 0; }
 .link-arrow { font-size: 0.8rem; color: var(--accent-color); }
 
 
-/* --- Items to Bring (No Images, Modern Grid) --- */
+/* --- Items to Bring (Bento Grid Style) --- */
 .gear-grid {
     display: grid;
     grid-template-columns: 2fr 1.5fr; /* 左右の比率 */
@@ -354,78 +354,85 @@ section { padding: 100px 0; }
     transform: translateY(-5px);
 }
 
-/* Primary Card (Smartphone) */
+/* Primary Card (Smartphone - Hero Style) */
 .gear-card.primary {
-    background: linear-gradient(135deg, #ffffff 0%, #f0f7ff 100%);
-    border: 2px solid var(--accent-color); /* 強調 */
-    grid-row: span 2; /* 縦に長く */
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    border: none;
+    color: #fff;
+    grid-row: span 2;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
 
-.gear-icon-large svg {
-    width: 120px;
-    height: 120px;
-    color: var(--accent-color);
-    margin: 30px 0;
-    filter: drop-shadow(0 10px 20px rgba(37,99,235,0.2));
+/* 背景装飾用アイコン */
+.card-bg-icon {
+    position: absolute;
+    bottom: -30px;
+    right: -30px;
+    width: 250px;
+    height: 250px;
+    opacity: 0.1;
+    color: #fff;
+    pointer-events: none;
 }
 
 .gear-card.primary h3 {
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    position: relative; z-index: 2;
+}
+.gear-card.primary p {
+    font-size: 1rem;
+    opacity: 0.9;
+    position: relative; z-index: 2;
+}
+
+.gear-icon-main svg {
+    width: 80px; height: 80px; color: #fff; margin-bottom: 20px;
+    filter: drop-shadow(0 5px 15px rgba(0,0,0,0.2));
 }
 
 /* Secondary Card (Battery, PC) */
 .gear-card.secondary {
-    background: #fdfdfd;
+    background: #fff;
     flex-direction: row;
     align-items: center;
     gap: 20px;
-    padding: 30px;
+    padding: 35px;
 }
 
-.gear-icon svg {
-    width: 40px;
-    height: 40px;
-    color: #64748b;
+.gear-icon-side {
+    flex-shrink: 0;
 }
-
-.gear-card.secondary h3 {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-bottom: 5px;
+.icon-circle {
+    width: 60px; height: 60px;
+    background: #eff6ff;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--accent-color);
 }
+.icon-circle svg { width: 28px; height: 28px; }
 
-.gear-card.secondary p {
-    font-size: 0.9rem;
-    color: #64748b;
-    margin: 0;
+.gear-info h3 {
+    font-size: 1.2rem; font-weight: bold; margin-bottom: 5px;
+}
+.gear-info p {
+    font-size: 0.9rem; color: #64748b; margin: 0;
 }
 
 /* Badges */
 .gear-badge {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    font-size: 0.8rem;
-    font-weight: bold;
-    padding: 4px 12px;
-    border-radius: 50px;
-    letter-spacing: 1px;
+    display: inline-block; padding: 4px 12px; border-radius: 50px;
+    font-size: 0.75rem; font-weight: bold; letter-spacing: 1px;
+    margin-bottom: 15px;
 }
-
 .gear-badge.required {
-    background: var(--accent-color);
-    color: #fff;
-    box-shadow: 0 4px 10px rgba(37,99,235,0.3);
+    background: #fff; color: var(--accent-color);
 }
-
 .gear-badge.recommended {
-    background: #e2e8f0;
-    color: #64748b;
+    background: #f1f5f9; color: #64748b; margin-bottom: 5px; display: inline-block;
 }
 
 
