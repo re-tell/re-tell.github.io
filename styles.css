@@ -396,11 +396,12 @@ section { padding: 100px 0; }
 
 /* Secondary Card (Battery, PC) */
 .gear-card.secondary {
-    background: #fff;
+    background: #f0f7ff; /* 背景を薄い青に変更 */
     flex-direction: row;
     align-items: center;
     gap: 20px;
     padding: 35px;
+    border: none; /* ボーダーなしですっきり */
 }
 
 .gear-icon-side {
@@ -408,10 +409,11 @@ section { padding: 100px 0; }
 }
 .icon-circle {
     width: 60px; height: 60px;
-    background: #eff6ff;
+    background: #ffffff; /* アイコン背景を白に変更 */
     border-radius: 50%;
     display: flex; align-items: center; justify-content: center;
     color: var(--accent-color);
+    box-shadow: 0 4px 10px rgba(37,99,235,0.1);
 }
 .icon-circle svg { width: 28px; height: 28px; }
 
@@ -432,7 +434,7 @@ section { padding: 100px 0; }
     background: #fff; color: var(--accent-color);
 }
 .gear-badge.recommended {
-    background: #f1f5f9; color: #64748b; margin-bottom: 5px; display: inline-block;
+    background: #e0e7ff; color: var(--accent-color); margin-bottom: 5px; display: inline-block;
 }
 
 
