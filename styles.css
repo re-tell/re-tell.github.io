@@ -508,3 +508,93 @@ footer { background: #fff; color: #94a3b8; padding: 30px 0; text-align: center; 
 
     .refined-list-dark { grid-template-columns: 1fr; }
 }
+/* --- Flow / Attendance Rules --- */
+
+/* 参加条件のアナウンスボックス */
+.attendance-info {
+    max-width: 800px;
+    margin: 0 auto 50px;
+    padding: 25px;
+    background: #fff;
+    border: 2px solid var(--accent-color);
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.1);
+}
+
+.attendance-info h3 {
+    font-size: 1.2rem;
+    color: var(--accent-color);
+    font-weight: bold;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.attendance-info p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--text-color);
+}
+
+.attendance-info strong {
+    color: #dc2626; /* 赤色で強調 */
+    background: #fee2e2;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.small-note {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    display: block;
+    margin-top: 5px;
+}
+
+/* ステータスバッジ (必須/任意) */
+.status-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.status-badge.required {
+    background: #dc2626; /* 赤 */
+    color: #fff;
+    box-shadow: 0 2px 5px rgba(220, 38, 38, 0.3);
+}
+
+.status-badge.optional {
+    background: #e2e8f0; /* グレー */
+    color: #64748b;
+}
+
+/* STEP 2 (必須) の強調スタイル */
+.timeline-content.must-attend {
+    border: 3px solid var(--accent-color); /* 青い太枠 */
+    background: #f0f9ff; /* ほんのり青い背景 */
+    transform: scale(1.03); /* 少し大きく */
+    box-shadow: 0 15px 30px rgba(37, 99, 235, 0.15);
+}
+
+.timeline-content.must-attend h4 {
+    color: var(--accent-color);
+    font-size: 1.25rem;
+}
+
+.time.text-highlight {
+    font-size: 1.5rem; /* STEP番号も少し大きく */
+    text-shadow: 0 0 10px rgba(37, 99, 235, 0.3);
+}
+
+/* スマホ対応の微調整 */
+@media (max-width: 768px) {
+    .timeline-content.must-attend {
+        transform: scale(1); /* スマホでは拡大しない */
+    }
+}
